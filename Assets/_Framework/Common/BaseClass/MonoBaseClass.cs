@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class MonoBaseClass : BaseReference
 {
     public GameObject Go;
-    public readonly Stack<MonoBaseClass> Child = new Stack<MonoBaseClass>();
+    public readonly Stack<MonoBaseClass> Childs = new Stack<MonoBaseClass>();
     private float destoryTime = 3f;
     private int timerID = 0;
     public virtual void Awake()
@@ -28,10 +28,11 @@ public abstract class MonoBaseClass : BaseReference
     public virtual void OnClose()
     {
         Go?.SetActive(false);
-        for (int i = 0; i < Child.Count; i++)
+        for (int i = 0; i < Childs.Count; i++)
         {
-            MonoBaseClass childNode = Child.Pop();
-            GameObjMgr.Instance.Hide(childNode);
+            MonoBaseClass childNode = Childs.Pop();
+            ReferenceMgr.Instance.Release(childNode);
+            childNode?.OnClose();
         }
         if (Go)
         {
@@ -43,6 +44,6 @@ public abstract class MonoBaseClass : BaseReference
         }
     }
     public abstract void OnDestory();
-    public override void Clear() { }
+    public override void Clear() {}
     
 }

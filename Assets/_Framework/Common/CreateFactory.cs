@@ -13,7 +13,7 @@ public class CreateFactory:Singleton<CreateFactory>
         return ReferenceMgr.Instance.Acquire<T>();
     }
 
-    //创建非嵌入式UI
+    //创建非嵌入式GameObject
     public T Create<T>(string path, Transform parent = null, Action<GameObject> action = null) where T : MonoBaseClass, new()
     {
         T t = ReferenceMgr.Instance.Acquire<T>();
@@ -33,13 +33,13 @@ public class CreateFactory:Singleton<CreateFactory>
         return t;
     }
 
-    //创建嵌入式UI ----> 子UI
+    //创建嵌入式GameObject ----> 子GameObject
     public T Create<T>(string path, MonoBaseClass parent = null, Action<T> action = null) where T : MonoBaseClass, new()
     {
         T t = ReferenceMgr.Instance.Acquire<T>();
         if (null == t.Go)
         {
-            parent?.Child.Push(t);
+            parent?.Childs.Push(t);
              ResourcesMgr.Instance.LoadGameObj(path, parent?.Go.transform, (go)=> {
                 t.Go = go;
                 t?.Awake();
@@ -50,13 +50,13 @@ public class CreateFactory:Singleton<CreateFactory>
         else
         {
             t?.OnOpen();
-            parent?.Child.Push(t);
+            parent?.Childs.Push(t);
             action?.Invoke(t);
         }
         return t;
     }
 
-    //创建嵌入式UI ----> 父UI
+    //创建嵌入式GameObject ----> 父GameObject
     public T Create<T>(string path, Transform parent = null, Action<T> action = null) where T : MonoBaseClass, new()
     {
         T t = ReferenceMgr.Instance.Acquire<T>();
