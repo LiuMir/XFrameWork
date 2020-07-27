@@ -13,6 +13,9 @@ public class NewUI : MonoBaseClass
         base.Awake();
         BtnTest();
         Debug.LogError("lzh Awake New UI");
+        NotificationMgr.Instance.RegistMsg<int, int, int, int>(EventCode.NewUIUpdateDataMsg, (arg0, arg1, arg2, arg3) => {
+            Debug.LogError($"{arg0} : {arg1} : {arg2} : {arg3} ");
+        });
     }
 
     public override void OnOpen()

@@ -24,6 +24,7 @@ public class DeleteBtnUI : MonoBaseClass
     {
         base.OnClose();
         Debug.LogError("lzh DeleteBtnUI OnClose");
+        NotificationMgr.Instance.SendMsg(EventCode.NewUIUpdateDataMsg, 1, 2, 3, 4);
     }
 
     public override void OnDestory()
