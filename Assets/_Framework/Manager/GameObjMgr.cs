@@ -7,11 +7,24 @@ using UnityEngine;
 
 public class GameObjMgr:Singleton<GameObjMgr>
 {
-    public void Show<T>(string path, Transform parent = null)where T:MonoBaseClass,new()
+    //显示非嵌入式UI
+    public T Show<T>(string path, Transform parent = null, Action<GameObject> action = null)where T:MonoBaseClass,new()
     {
-        T t = CreateFactory.Instance.Create<T>(path, parent);
-        t?.OnOpen();
+        return CreateFactory.Instance.Create<T>(path, parent, action);
     }
+
+    //嵌入式UI ----> 子UI
+    public T ShowChild<T>(string path, MonoBaseClass parent = null, Action<T> action = null) where T : MonoBaseClass, new()
+    {
+        return CreateFactory.Instance.Create(path, parent, action);
+    }
+
+    //创建嵌入式UI ----> 父UI
+    public T ShowChild<T>(string path, Transform parent = null, Action<T> action = null) where T : MonoBaseClass, new()
+    {
+        return CreateFactory.Instance.Create(path, parent, action);
+    }
+
 
     public void Hide(MonoBaseClass mb) 
     {

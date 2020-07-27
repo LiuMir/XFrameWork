@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{904D1D99-857D-124D-BEF8-2131A655FE9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -75,6 +74,7 @@
     <Compile Include="Assets\_Framework\Manager\ReferenceMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\ResourcesMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\TimerMGr.cs" />
+    <Compile Include="Assets\_Scripts\DeleteBtnUI.cs" />
     <Compile Include="Assets\_Scripts\NewUI.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/UnityDemo/FrameWork/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

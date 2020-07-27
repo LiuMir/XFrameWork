@@ -1,10 +1,12 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
 public abstract class MonoBaseClass : BaseReference
 {
     public GameObject Go;
+    public readonly Stack<MonoBaseClass> Child = new Stack<MonoBaseClass>();
     private float destoryTime = 3f;
     private int timerID = 0;
     public virtual void Awake()
@@ -26,6 +28,11 @@ public abstract class MonoBaseClass : BaseReference
     public virtual void OnClose()
     {
         Go?.SetActive(false);
+        for (int i = 0; i < Child.Count; i++)
+        {
+            MonoBaseClass childNode = Child.Pop();
+            GameObjMgr.Instance.Hide(childNode);
+        }
         if (Go)
         {
             timerID = TimerMgr.Instance.AddTimer(destoryTime, 1, () =>
