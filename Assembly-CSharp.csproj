@@ -66,10 +66,10 @@
     <Compile Include="Assets\_Framework\Common\BaseClass\BaseReference.cs" />
     <Compile Include="Assets\_Framework\Common\BaseClass\MonoBaseClass.cs" />
     <Compile Include="Assets\_Framework\Common\CreateFactory.cs" />
+    <Compile Include="Assets\_Framework\Common\EventCode.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\MonoSingle.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\Singleton.cs" />
     <Compile Include="Assets\_Framework\Common\StaticSceneObj.cs" />
-    <Compile Include="Assets\_Framework\EventCode.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
     <Compile Include="Assets\_Framework\Manager\GameObjMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\NotificationMgr.cs" />

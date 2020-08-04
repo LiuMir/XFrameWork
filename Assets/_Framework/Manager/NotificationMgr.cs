@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /// <summary>
 /// 消息管理中心，目前最大支持传四个参数。若需要扩展，可以自己添加
