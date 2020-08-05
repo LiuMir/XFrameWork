@@ -28,6 +28,8 @@ public class BundleConfigTool:Editor
     private Object[] FolderObjs;
 
     private static string configPath = "_Framework/Editor/BundleConfig";
+    private static string configFileName = "BundleConfig.asset";
+    private static string abExtension = ".ab";
 
     private void OnEnable()
     {
@@ -43,11 +45,11 @@ public class BundleConfigTool:Editor
     {
         base.OnInspectorGUI();
         serializedObject.Update();
-        SetFolderPathDragList();
+        CreateFolderPathDragList();
     }
 
     //设置文件夹拖拽列表
-    void SetFolderPathDragList()
+    void CreateFolderPathDragList()
     {
         EditorGUILayout.Space();
         EditorGUILayout.Space();
@@ -55,7 +57,7 @@ public class BundleConfigTool:Editor
         for (int i = 0; i < propertyNames.Length; i++)
         {
             FolderObjs[i] = EditorGUILayout.ObjectField(propertyNames[i], FolderObjs[i], typeof(Object), false);
-            string path = AssetDatabase.GetAssetPath(FolderObjs[i]);
+            string path = AssetDatabase.GetAssetPath(FolderObjs[i]).Replace("Assets/", "");
             if (!propertys[i].stringValue.Equals(path) && path.Length > 0)
             {
                 propertys[i].stringValue = path;
@@ -65,19 +67,111 @@ public class BundleConfigTool:Editor
         }
     }
 
-    [MenuItem("Tool/CreateOrUpdateBundleConfig")]
-    static void CreateOrUpdateConfig()
+    [MenuItem("Tool/CreateBundleConfig")]
+    static void CreateConfig()
     {
         string path = Path.Combine(Application.dataPath, configPath);
-        string fileName = "BundleConfig.asset";
-        if (File.Exists(Path.Combine(path, fileName)))
+        if (!File.Exists(Path.Combine(path, configFileName)))
         {
-            AssetDatabase.DeleteAsset(Path.Combine("Assets", configPath, fileName));
+            ScriptableObject config = CreateInstance(typeof(BundleConfigDefine));
+            AssetDatabase.CreateAsset(config, Path.Combine("Assets", configPath, configFileName));
+            AssetDatabase.Refresh();
         }
-        ScriptableObject config = ScriptableObject.CreateInstance(typeof(BundleConfigDefine));
-        AssetDatabase.CreateAsset(config, Path.Combine("Assets", configPath, fileName));
+    }
+
+    //构建ab包
+    [MenuItem("Tool/BuildBundle")]
+    static void BuildBundle()
+    {
+        SetBundleName();
+    }
+
+    //强制重新构建ab包
+    [MenuItem("Tool/ForceRebuildBundle")]
+    static void ForceRebuildBundle()
+    {
+
+    }
+
+    private static BundleConfigDefine bundleConfig;
+    static void SetBundleName()
+    {
+        bundleConfig = AssetDatabase.LoadAssetAtPath(Path.Combine("Assets", configPath, configFileName), typeof(BundleConfigDefine)) as BundleConfigDefine;
+        ClearBundleName();
+        SetCurFolderAsBundleName(bundleConfig.CurFolerOneBundle);
+        SetSubFolderAsBundleName(bundleConfig.SubFolderOneBundle);
+        SetFileNamsAsBundleName(bundleConfig.SingleFileOneBundleFolder);
+        SetFileNamsAsBundleName(bundleConfig.SceneFileOneBundle);
         AssetDatabase.Refresh();
-        Debug.LogError(Path.Combine("Assets", configPath, fileName));
+    }
+
+    static void ClearBundleName()
+    {
+        string[] BundleNames = AssetDatabase.GetAllAssetBundleNames();
+        for (int i = 0; i < BundleNames.Length; i++)
+        {
+            EditorUtility.DisplayProgressBar("Clear AssetBundle Name", string.Format("{0}/{1}", i, BundleNames.Length), (float)i / BundleNames.Length);
+            AssetDatabase.RemoveAssetBundleName(BundleNames[i], true);
+        }
+        EditorUtility.ClearProgressBar();
+    }
+    
+    static void SetCurFolderAsBundleName(string folderPath)
+    {
+        SetFileBundleName(folderPath, (ai, filePath) => {
+            ai.assetBundleName = folderPath + abExtension;
+        });
+    }
+
+    static void SetSubFolderAsBundleName(string folderPath)
+    {
+        string dir = Path.Combine(Application.dataPath, folderPath);
+        string[] dirs = Directory.GetDirectories(dir, "*", SearchOption.TopDirectoryOnly);
+        string[] filePaths = Directory.GetFiles(dir, "*", SearchOption.TopDirectoryOnly);
+        for (int i = 0; i < filePaths.Length; i++)
+        {
+            if (Path.GetExtension(filePaths[i]) != ".meta")
+            {
+                string localFilePath = PathUtility.Instance.GetAssetPath(filePaths[i]);
+                AssetImporter ai = AssetImporter.GetAtPath(localFilePath);
+                if (ai)
+                {
+                    ai.assetBundleName = Path.GetDirectoryName(localFilePath).ToLower() + abExtension;
+                }
+            }
+        }
+        if (dirs.Length > 0)
+        {
+            for (int i = 0; i < dirs.Length; i++)
+            {
+                SetSubFolderAsBundleName(dirs[i]);
+            }
+        }
+    }
+
+    static void SetFileNamsAsBundleName(string folderPath)
+    {
+        SetFileBundleName(folderPath, (ai, filePath) => {
+            ai.assetBundleName = Path.Combine(folderPath, Path.GetFileNameWithoutExtension(filePath)).ToLower() + abExtension;
+        });
+    }
+
+    static void SetFileBundleName(string folderPath, System.Action<AssetImporter, string> action)
+    {
+        string dir = Path.Combine(Application.dataPath, folderPath);
+        string[] filePaths = Directory.GetFiles(dir);
+        for (int i = 0; i < filePaths.Length; i++)
+        {
+            if (Path.GetExtension(filePaths[i]) != ".meta")
+            {
+                string localFilePath = PathUtility.Instance.GetAssetPath(filePaths[i]);
+                AssetImporter ai = AssetImporter.GetAtPath(localFilePath);
+                if (ai)
+                {
+                    action?.Invoke(ai, localFilePath);
+                }
+            }
+        }
     }
 
 }
