@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
@@ -83,7 +84,12 @@ public class BundleConfigTool:Editor
     [MenuItem("Tool/BuildBundle")]
     static void BuildBundle()
     {
+        Caching.ClearCache();
         SetBundleName();
+        BuildPipeline.BuildAssetBundles(PathUtility.Instance.GetAbOutPath(), 
+            BuildAssetBundleOptions.ChunkBasedCompression | 
+            BuildAssetBundleOptions.DisableWriteTypeTree, BuildTarget.StandaloneWindows);
+        AssetDatabase.Refresh();
     }
 
     //强制重新构建ab包
@@ -102,7 +108,6 @@ public class BundleConfigTool:Editor
         SetSubFolderAsBundleName(bundleConfig.SubFolderOneBundle);
         SetFileNamsAsBundleName(bundleConfig.SingleFileOneBundleFolder);
         SetFileNamsAsBundleName(bundleConfig.SceneFileOneBundle);
-        AssetDatabase.Refresh();
     }
 
     static void ClearBundleName()
@@ -115,7 +120,7 @@ public class BundleConfigTool:Editor
         }
         EditorUtility.ClearProgressBar();
     }
-    
+       
     static void SetCurFolderAsBundleName(string folderPath)
     {
         SetFileBundleName(folderPath, (ai, filePath) => {

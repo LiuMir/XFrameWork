@@ -13,4 +13,9 @@
         return str;
     }
 
+    public string GetAbOutPath()
+    {
+        return "";
+    }
+
 }

@@ -16,4 +16,4 @@ MonoBehaviour:
   SingleFileOneBundleFolder: 
   CurFolerOneBundle: 
   SubFolderOneBundle: _Resources
-  SceneFileOneBundle: 
+  SceneFileOneBundle: _Scenes
