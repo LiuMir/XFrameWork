@@ -1,4 +1,4 @@
-﻿public abstract class BaseReference
+﻿public interface IBaseReference
 {
-    public abstract void Clear();
+    void Clear();
 }

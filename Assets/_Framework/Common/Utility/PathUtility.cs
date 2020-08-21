@@ -18,4 +18,9 @@
         return "";
     }
 
+    public string GetStreamingAssetPath()
+    {
+        return "";
+    }
+
 }

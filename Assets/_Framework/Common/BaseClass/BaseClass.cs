@@ -1,5 +1,5 @@
-﻿public abstract class BaseClass : BaseReference
+﻿public abstract class BaseClass : IBaseReference
 {
-    public override void Clear() { }
+    public virtual void Clear() { }
 }
 

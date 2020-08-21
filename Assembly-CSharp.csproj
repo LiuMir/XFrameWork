@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{904D1D99-857D-124D-BEF8-2131A655FE9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -61,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Framework\Common\AssetCoroutine.cs" />
     <Compile Include="Assets\_Framework\Common\Attribute\CountLimitAttribute.cs" />
     <Compile Include="Assets\_Framework\Common\Attribute\DestoryTimeAttribute.cs" />
     <Compile Include="Assets\_Framework\Common\BaseClass\BaseClass.cs" />
@@ -71,9 +71,12 @@
     <Compile Include="Assets\_Framework\Common\Singleton\MonoSingle.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\Singleton.cs" />
     <Compile Include="Assets\_Framework\Common\StaticSceneObj.cs" />
+    <Compile Include="Assets\_Framework\Common\Utility\AssertUtility.cs" />
+    <Compile Include="Assets\_Framework\Common\Utility\DebugUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\PathUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\TimeUtility.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
+    <Compile Include="Assets\_Framework\Manager\ABMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\GameObjMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\NotificationMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\ReferenceMgr.cs" />

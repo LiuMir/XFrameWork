@@ -5,20 +5,20 @@ using UnityEngine;
 using System.Reflection;
 
 public class ReferenceMgr:Singleton<ReferenceMgr>{
-    private readonly ConcurrentDictionary<Type, Stack<BaseReference>> referencePool = new ConcurrentDictionary<Type, Stack<BaseReference>>();
+    private readonly ConcurrentDictionary<Type, Stack<IBaseReference>> referencePool = new ConcurrentDictionary<Type, Stack<IBaseReference>>();
   
     // 获取一个引用类
-    public T Acquire<T>() where T :BaseReference, new()
+    public T Acquire<T>() where T :IBaseReference, new()
     {
-        if (referencePool.TryGetValue(typeof(T), out Stack<BaseReference> iReferences) && iReferences.Count > 0 )
+        if (referencePool.TryGetValue(typeof(T), out Stack<IBaseReference> iReferences) && iReferences.Count > 0 )
         {
-            return iReferences.Pop() as T;
+            return (T)iReferences.Pop();
         }
         else
         {
             if (!referencePool.ContainsKey(typeof(T)))
             {
-                iReferences = new Stack<BaseReference>();
+                iReferences = new Stack<IBaseReference>();
                 referencePool.TryAdd(typeof(T), iReferences);
             }
             return new T();
@@ -26,9 +26,9 @@ public class ReferenceMgr:Singleton<ReferenceMgr>{
     }
     
     // 回收一个引用类
-    public void Release(BaseReference type)
+    public void Release(IBaseReference type)
     {
-        if (referencePool.TryGetValue(type.GetType(), out Stack<BaseReference> iReferences))
+        if (referencePool.TryGetValue(type.GetType(), out Stack<IBaseReference> iReferences))
         {
             type.Clear();
             int count = 3; // 默认存三个
@@ -53,10 +53,10 @@ public class ReferenceMgr:Singleton<ReferenceMgr>{
     }
 
     //清除指定缓存对象
-    public void ClearOneType(BaseReference type)
+    public void ClearOneType(IBaseReference type)
     {
         Type t = type.GetType();
-        if (referencePool.TryRemove(t, out Stack<BaseReference> iReferences))
+        if (referencePool.TryRemove(t, out Stack<IBaseReference> iReferences))
         {
             iReferences.Clear();
         }

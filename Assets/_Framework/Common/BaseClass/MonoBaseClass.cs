@@ -2,7 +2,7 @@
 using System.Reflection;
 using UnityEngine;
 
-public abstract class MonoBaseClass : BaseReference
+public abstract class MonoBaseClass : IBaseReference
 {
     public GameObject Go;
     public readonly Stack<MonoBaseClass> Childs = new Stack<MonoBaseClass>();
@@ -43,6 +43,6 @@ public abstract class MonoBaseClass : BaseReference
         }
     }
     public abstract void OnDestory();
-    public override void Clear() {}
-    
+
+    public virtual void Clear(){ }
 }
