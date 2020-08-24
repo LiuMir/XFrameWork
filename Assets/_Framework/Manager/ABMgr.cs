@@ -88,7 +88,6 @@ public class ABMgr:Singleton<ABMgr>
         {
             LoadABsync(paths[i]);
         }
-        // TODO加载完成后回调可能需要加下
     }
 
     //加载AssetBundleManifest
@@ -126,5 +125,24 @@ public class ABMgr:Singleton<ABMgr>
         {
             loadedABs.TryAdd(abInfo.fullPath, abInfo);
         }
+    }
+
+    // 尝试获取assetBundle
+    public AssetBundle TryGetBundle(string path)
+    {
+        AssetBundle assetBundle = null;
+        if (ExistsAB(path))
+        {
+            ABInfo abInfo = ReferenceMgr.Instance.Acquire<ABInfo>();
+            if (loadedABs.TryGetValue(path, out abInfo) && AssertUtility.Instance.AssertNull(abInfo.Bundle, $"路径为{path}的bundle加载逻辑出现错误！！！"))
+            {
+                assetBundle = abInfo.Bundle;
+            }
+        }
+        else
+        {
+            Debug.LogError($"路径为{path}的bundle还没有加载，请先调用加载的API！！！");
+        }
+        return assetBundle;
     }
 }
