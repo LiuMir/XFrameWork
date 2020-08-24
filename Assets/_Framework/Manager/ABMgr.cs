@@ -65,7 +65,9 @@ public class ABMgr:Singleton<ABMgr>
     //异步加载AB
     public IEnumerator LoadABAsync(string path)
     {
-        yield return new AssetCoroutine(path); 
+        AssetCoroutine assetCoroutine = ReferenceMgr.Instance.Acquire<AssetCoroutine>();
+        assetCoroutine.SetLoadPath(path);
+        yield return assetCoroutine; 
         // TODO加载完成后回调可能需要加下
     }
 

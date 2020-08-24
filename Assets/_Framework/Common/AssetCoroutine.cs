@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class AssetCoroutine : CustomYieldInstruction
+public class AssetCoroutine : CustomYieldInstruction,IBaseReference
 {
     public override bool keepWaiting => !CheckisDone();
     public bool IsDone { get; private set; }
@@ -11,15 +11,12 @@ public class AssetCoroutine : CustomYieldInstruction
     
     public Action<AssetCoroutine> completed;
 
-    private List<ABInfo> abInfoList;
-    private List<string> requestPaths;
-    private List<AssetBundleCreateRequest> requests;
+    private readonly List<ABInfo> abInfoList = new List<ABInfo>();
+    private readonly List<string> requestPaths = new List<string>();
+    private readonly List<AssetBundleCreateRequest> requests = new List<AssetBundleCreateRequest>();
 
-    public AssetCoroutine(string path)
+    public void SetLoadPath(string path)
     {
-        requests = new List<AssetBundleCreateRequest>();
-        requestPaths = new List<string>();
-        abInfoList = new List<ABInfo>();
         LoadAssetBundleAsync(path);
     }
 
@@ -98,4 +95,12 @@ public class AssetCoroutine : CustomYieldInstruction
         return curProgress / total;
     }
 
+    public void Clear()
+    {
+        completed = null;
+        IsDone = true;
+        abInfoList.Clear();
+        requestPaths.Clear();
+        requests.Clear();
+    }
 }
