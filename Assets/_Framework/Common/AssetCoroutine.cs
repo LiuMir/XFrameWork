@@ -15,6 +15,7 @@ public class AssetCoroutine : CustomYieldInstruction,IBaseReference
     private readonly List<string> requestPaths = new List<string>();
     private readonly List<AssetBundleCreateRequest> requests = new List<AssetBundleCreateRequest>();
 
+    //设置加载路径
     public void SetLoadPath(string path)
     {
         LoadAssetBundleAsync(path);

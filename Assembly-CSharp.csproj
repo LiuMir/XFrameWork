@@ -77,6 +77,7 @@
     <Compile Include="Assets\_Framework\Common\Utility\TimeUtility.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
     <Compile Include="Assets\_Framework\Manager\ABMgr.cs" />
+    <Compile Include="Assets\_Framework\Manager\CoroutineMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\GameObjMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\NotificationMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\ReferenceMgr.cs" />
