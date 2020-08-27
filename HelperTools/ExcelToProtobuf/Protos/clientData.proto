@@ -1,0 +1,8 @@
+syntax = "proto3"; 
+option optimize_for = LITE_RUNTIME;
+
+message st_action_sound_data {
+	sint32	ID	=	1;
+	bytes	actionSound	=	2;
+}
+
