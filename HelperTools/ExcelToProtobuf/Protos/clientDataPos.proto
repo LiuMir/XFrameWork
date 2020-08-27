@@ -1,0 +1,12 @@
+syntax = "proto3"; 
+option optimize_for = LITE_RUNTIME;
+
+message ClientDataPosData {
+	sint32	ID	=	1;
+	sint32 	Pos = 2;
+	sint32 	Length = 3;
+}
+
+message ClientDataPosConfig {
+	repeated ClientDataPosData Datas = 1;
+}
