@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08b0379aa17a664bb21d334af59b8f5, type: 3}
   m_Name: BundleConfig
   m_EditorClassIdentifier: 
-  BundleResRootFolder: 
-  SingleFileOneBundleFolder: 
+  BundleResRootFolder: _Resources
+  SingleFileOneBundleFolder: _Resources/UI
   CurFolerOneBundle: 
   SubFolderOneBundle: _Resources
   SceneFileOneBundle: _Scenes

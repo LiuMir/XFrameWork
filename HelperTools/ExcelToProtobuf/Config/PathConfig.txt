@@ -1,2 +1,5 @@
-E:\CSharp\ExcelToProtobuf\Excel
-E:\CSharp\ExcelToProtobuf\Protos
+E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\Excel
+E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\Protos
+E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\BuildProtos.bat
+E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\Csharp
+E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\bin\Debug\Google.Protobuf.dll

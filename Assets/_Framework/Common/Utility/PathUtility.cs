@@ -1,4 +1,7 @@
-﻿public class PathUtility:Singleton<PathUtility>
+﻿using UnityEngine;
+using System.IO;
+
+public class PathUtility:Singleton<PathUtility>
 {
 
     //绝对路径获取Asset路径
@@ -15,7 +18,12 @@
 
     public string GetAbOutPath()
     {
-        return "";
+        string path = Application.dataPath + "/BundlePath";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+        return path;
     }
 
     public string GetStreamingAssetPath()

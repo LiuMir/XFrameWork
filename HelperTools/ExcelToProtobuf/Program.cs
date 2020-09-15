@@ -32,6 +32,18 @@ namespace ExcelToProtobuf
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Excel表全部转换完成！！！");
                         Console.ForegroundColor = ConsoleColor.White;
+
+                        Console.WriteLine("开始转换C#类…………");
+                        bool isGenerat = GeneratClass.CallProtoc(lines[2]);
+                        Console.WriteLine("转换C#类完成…………");
+
+                        if (isGenerat)
+                        {
+                            Console.WriteLine("开始编译C#类…………");
+                            Compiler2Dll.Compiler(lines[3], lines[3], lines[4]);
+                            Console.WriteLine("编译C#类完成…………");
+                        }
+
                     }
                     else
                     {
