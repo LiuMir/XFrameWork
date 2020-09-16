@@ -4,6 +4,7 @@ using System.IO;
 
 namespace ExcelToProtobuf
 {
+    // .proto文件转class
     public class GeneratClass
     {
         public static bool CallProtoc(string path)

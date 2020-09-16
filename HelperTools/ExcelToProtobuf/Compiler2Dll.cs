@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExcelToProtobuf
 {
+    // .cs文件转dll 
     public class Compiler2Dll
     {
         // 目标文件夹、输出文件夹
         public static bool Compiler(string targetPath, string outPath, string pbDllPath)
         {
-            string dllName = "clientData.dll";
-            string dllFilePath = Path.Combine(outPath, dllName);
+            string dllFilePath = Path.Combine(outPath, Common.dllName);
             if (!Directory.Exists(targetPath))
             {
                 Console.WriteLine($"{targetPath}：需要编译的C#文件夹不存在！！！");

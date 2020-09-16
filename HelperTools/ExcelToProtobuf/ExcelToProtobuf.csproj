@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="Compiler2Dll.cs" />
+    <Compile Include="Excel2Bytes.cs" />
     <Compile Include="GeneratClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

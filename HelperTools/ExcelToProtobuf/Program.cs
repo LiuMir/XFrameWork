@@ -15,7 +15,7 @@ namespace ExcelToProtobuf
             if (File.Exists(configFilePath))
             {
                 string[] lines = File.ReadAllLines(configFilePath);
-                if (lines.Length < 2)
+                if (lines.Length < 5) // 所需的配置条数
                 {
                     Console.WriteLine($"{configFilePath}配置文件规则不正确，请按照规则进行修改");
                 }
@@ -40,7 +40,7 @@ namespace ExcelToProtobuf
                         if (isGenerat)
                         {
                             Console.WriteLine("开始编译C#类…………");
-                            Compiler2Dll.Compiler(lines[3], lines[3], lines[4]);
+                            bool isCompiler = Compiler2Dll.Compiler(lines[3], lines[3], lines[4]);
                             Console.WriteLine("编译C#类完成…………");
                         }
 

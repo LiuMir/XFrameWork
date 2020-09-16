@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ExcelToProtobuf
 {
+    // excel转.proto
     public class ReadExcel
     {
         private static string protoFileName = "clientData.proto";
@@ -64,7 +65,7 @@ namespace ExcelToProtobuf
                 int index = 0;
                 for (int i = 0; i < cellNum; i++)
                 {
-                    if (row.GetCell(i).StringCellValue == "#") continue;
+                    if (row.GetCell(i).StringCellValue == "#") continue; // 客户端、服务器所需的字段不一样，筛选条件也不一样，自己做调整
                     if (row.GetCell(i).StringCellValue != "__END__")
                     {
                         string typeName = GetProtoType(sheet.GetRow(3).GetCell(i).StringCellValue.Trim()); // 类型名字
@@ -85,6 +86,7 @@ namespace ExcelToProtobuf
                     content = content.Replace("fileName", sheet.SheetName);
                     content = content.Replace("content", stringBuilder.ToString());
                     CreateFile(content);
+                    CreateConfigFile(sheet.SheetName);
                     System.Console.WriteLine(sheet.SheetName + "转换完成！！！\n");
                 }
             }
@@ -122,6 +124,18 @@ namespace ExcelToProtobuf
                     byte[] datas = Encoding.Default.GetBytes(content);
                     fs.Write(datas, 0, datas.Length);
                 }
+            }
+        }
+
+        //创建配置proto文件
+        private static void CreateConfigFile(string msgName)
+        {
+            string content = "message msg_config {\n\trepeated msg_data datas = 1;\n}\n";
+            content = content.Replace("msg", msgName);
+            using (FileStream fs = new FileStream(outFilePath, FileMode.Append, FileAccess.Write))
+            {
+                byte[] datas = Encoding.Default.GetBytes(content);
+                fs.Write(datas, 0, datas.Length);
             }
         }
 

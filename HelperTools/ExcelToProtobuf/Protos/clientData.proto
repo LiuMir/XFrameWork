@@ -6,3 +6,176 @@ message st_action_sound_data {
 	bytes	actionSound	=	2;
 }
 
+message st_action_sound_config {
+	repeated st_action_sound_data datas = 1;
+}
+message st_active_box_data {
+	sint32	ID	=	1;
+	sint32	ActiveValue	=	2;
+	sint32	RewardID	=	3;
+}
+
+message st_active_box_config {
+	repeated st_active_box_data datas = 1;
+}
+message st_active_skill_data {
+	sint32	ID	=	1;
+	bytes	name	=	2;
+	bytes	des	=	3;
+	sint32	CD	=	4;
+	repeated bytes	value	=	5;
+	repeated bytes	condition	=	6;
+	repeated bytes	cost	=	7;
+	sint32	grade	=	8;
+	sint32	fightPower	=	9;
+}
+
+message st_active_skill_config {
+	repeated st_active_skill_data datas = 1;
+}
+message st_activity_data {
+	sint32	activityId	=	1;
+	bytes	showBeginTime	=	2;
+	bytes	beginTime	=	3;
+	bytes	endTime	=	4;
+	bytes	showEndTime	=	5;
+	sint32	isGlobal	=	6;
+	sint32	isOperation	=	7;
+	bytes	openCondition	=	8;
+	bytes	demandType	=	9;
+	bytes	regular	=	10;
+}
+
+message st_activity_config {
+	repeated st_activity_data datas = 1;
+}
+message st_activity_details_data {
+	sint32	activityId	=	1;
+	sint32	templateId	=	2;
+	bytes	name	=	3;
+	bytes	desc	=	4;
+	bytes	ruleDesc	=	5;
+	bytes	icon	=	6;
+	bytes	banner	=	7;
+	bytes	window	=	8;
+	sint32	hideTime	=	9;
+	sint32	showInMainWindow	=	10;
+	repeated bytes	condition	=	11;
+	sint32	time	=	12;
+	sint32	rate	=	13;
+	sint32	color	=	14;
+	sint32	extraIcon	=	15;
+	sint32	position	=	16;
+	sint32	order	=	17;
+	sint32	topSort	=	18;
+	sint32	jump	=	19;
+	repeated bytes	jumpDetail	=	20;
+}
+
+message st_activity_details_config {
+	repeated st_activity_details_data datas = 1;
+}
+message st_activity_global_config_data {
+	sint32	ID	=	1;
+	bytes	configName	=	2;
+	bytes	parameter	=	3;
+}
+
+message st_activity_global_config_config {
+	repeated st_activity_global_config_data datas = 1;
+}
+message st_activity_participate_type_data {
+	sint32	ID	=	1;
+}
+
+message st_activity_participate_type_config {
+	repeated st_activity_participate_type_data datas = 1;
+}
+message st_activity_rank_type_data {
+	sint32	ID	=	1;
+}
+
+message st_activity_rank_type_config {
+	repeated st_activity_rank_type_data datas = 1;
+}
+message st_activity_sevenday_task_data {
+	sint32	taskId	=	1;
+	sint32	day	=	2;
+	sint32	taskGroup	=	3;
+	sint32	demandType	=	4;
+	sint32	demandPara1	=	5;
+	bytes	demandPara2	=	6;
+	sint32	taskSchedule	=	7;
+	bytes	targetDesc	=	8;
+	repeated bytes	reward	=	9;
+	sint32	order	=	10;
+}
+
+message st_activity_sevenday_task_config {
+	repeated st_activity_sevenday_task_data datas = 1;
+}
+message st_activity_sub_activity_data {
+	sint32	subActivityId	=	1;
+	sint32	activityId	=	2;
+	sint32	subId	=	3;
+	bytes	participateCondition	=	4;
+	repeated bytes	participateReward	=	5;
+	sint32	demandType	=	6;
+	sint32	demandPara1	=	7;
+	bytes	demandPara2	=	8;
+	sint32	taskSchedule	=	9;
+	repeated bytes	reward	=	10;
+	bytes	extraParams	=	11;
+	sint32	globalConfig	=	12;
+}
+
+message st_activity_sub_activity_config {
+	repeated st_activity_sub_activity_data datas = 1;
+}
+message st_activity_task_group_desc_data {
+	sint32	taskGroupId	=	1;
+	bytes	desc	=	2;
+}
+
+message st_activity_task_group_desc_config {
+	repeated st_activity_task_group_desc_data datas = 1;
+}
+message st_adventure_data {
+	sint32	ID	=	1;
+	bytes	behavior	=	2;
+}
+
+message st_adventure_config {
+	repeated st_adventure_data datas = 1;
+}
+message st_alchemy_data {
+	sint32	ID	=	1;
+	sint32	treatEffect	=	2;
+}
+
+message st_alchemy_config {
+	repeated st_alchemy_data datas = 1;
+}
+message st_alliance_createprice_data {
+	sint32	ID	=	1;
+	bytes	stateNumber	=	2;
+	sint32	consume	=	3;
+	sint32	discountCoefficient	=	4;
+}
+
+message st_alliance_createprice_config {
+	repeated st_alliance_createprice_data datas = 1;
+}
+message st_alliance_flag_data {
+	sint32	ID	=	1;
+	sint32	style	=	2;
+	bytes	picture1	=	3;
+	bytes	picture2	=	4;
+	bytes	icon1	=	5;
+	bytes	icon2	=	6;
+	sint32	condition	=	7;
+}
+
+message st_alliance_flag_config {
+	repeated st_alliance_flag_data datas = 1;
+}
