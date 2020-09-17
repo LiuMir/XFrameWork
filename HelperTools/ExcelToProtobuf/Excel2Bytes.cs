@@ -122,7 +122,6 @@ namespace ExcelToProtobuf
                 }
                 Serialize(configIns, sheet.SheetName);
                 WriteLawsData(configIns, sheet.SheetName);
-                SerializePos(configIns, sheet.SheetName);
             }
         }
 
@@ -181,6 +180,10 @@ namespace ExcelToProtobuf
 
         // 位置数据，为了加载数据的时候不用全部加载（按需加载）
         // 自定义选择 如果需要自己编写 .proto文件
+        // 作为优化的备选，SerializePos里面的逻辑都可以删除
+        // 思路为：
+        // 一、修改序列化方法（Serialize),对xxxconfig类里面的datas遍历序列化后依次写进文件
+        // 二、对datas里每一个对象进行相应的计算，例如：index、pos、length
         private static void SerializePos(object obj, string sheetName)
         {
             string fileName = sheetName + "Pos.bytes";
@@ -196,8 +199,8 @@ namespace ExcelToProtobuf
                 object dataIns = assembly.CreateInstance("clientDataPos"); // 创建数据类
                 MethodInfo addMethod =  propertyInfo.PropertyType.GetMethod("Add", new Type[] { dataIns.GetType() });
                 addMethod?.Invoke(DatasVal, new[] { dataIns }); // 往容器中添加数据
-
-                int length = (obj as IMessage).ToByteArray().Length; // 使用Pb自带的转字节数组
+                
+                int length = (datas[i] as IMessage).ToByteArray().Length; // 使用Pb自带的转字节数组
                 dataIns.GetType().GetField("index_", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(dataIns, i); // 数据在第几行
                 dataIns.GetType().GetField("length_", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(dataIns, length);// 当前行数据长度
                 dataIns.GetType().GetField("pos_", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(dataIns, pos);// 当前行数据开始位置
