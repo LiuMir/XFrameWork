@@ -101,14 +101,15 @@ namespace ExcelToProtobuf
                 case "key":
                     return "sint32";
                 case "string":
+                    return "string";
                 case "intarray":
                 case "intArray":
-                    return "bytes";
+                    return "repeated int32";
                 case "floatarray":
                     return "repeated float";
                 case "stringarray":
                 case "stringArray":
-                    return "repeated bytes";
+                    return "repeated string";
                 default:
                     return typeName;
             }

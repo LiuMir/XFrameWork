@@ -42,6 +42,13 @@ namespace ExcelToProtobuf
                             Console.WriteLine("开始编译C#类…………");
                             bool isCompiler = Compiler2Dll.Compiler(lines[3], lines[3], lines[4]);
                             Console.WriteLine("编译C#类完成…………");
+
+                            if (isCompiler)
+                            {
+                                Console.WriteLine("开始序列化数据……");
+                                Excel2Bytes.Data(lines[3], lines[0]);
+                                Console.WriteLine("序列化数据完成…………");
+                            }
                         }
 
                     }

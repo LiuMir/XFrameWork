@@ -23,34 +23,34 @@ public static partial class ClientDataReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChBjbGllbnREYXRhLnByb3RvIjcKFHN0X2FjdGlvbl9zb3VuZF9kYXRhEgoK",
-          "AklEGAEgASgREhMKC2FjdGlvblNvdW5kGAIgASgMIj4KFnN0X2FjdGlvbl9z",
+          "AklEGAEgASgREhMKC2FjdGlvblNvdW5kGAIgASgJIj4KFnN0X2FjdGlvbl9z",
           "b3VuZF9jb25maWcSJAoFZGF0YXMYASADKAsyFS5zdF9hY3Rpb25fc291bmRf",
           "ZGF0YSJHChJzdF9hY3RpdmVfYm94X2RhdGESCgoCSUQYASABKBESEwoLQWN0",
           "aXZlVmFsdWUYAiABKBESEAoIUmV3YXJkSUQYAyABKBEiOgoUc3RfYWN0aXZl",
           "X2JveF9jb25maWcSIgoFZGF0YXMYASADKAsyEy5zdF9hY3RpdmVfYm94X2Rh",
           "dGEinAEKFHN0X2FjdGl2ZV9za2lsbF9kYXRhEgoKAklEGAEgASgREgwKBG5h",
-          "bWUYAiABKAwSCwoDZGVzGAMgASgMEgoKAkNEGAQgASgREg0KBXZhbHVlGAUg",
-          "AygMEhEKCWNvbmRpdGlvbhgGIAMoDBIMCgRjb3N0GAcgAygMEg0KBWdyYWRl",
+          "bWUYAiABKAkSCwoDZGVzGAMgASgJEgoKAkNEGAQgASgREg0KBXZhbHVlGAUg",
+          "AygJEhEKCWNvbmRpdGlvbhgGIAMoCRIMCgRjb3N0GAcgAygJEg0KBWdyYWRl",
           "GAggASgREhIKCmZpZ2h0UG93ZXIYCSABKBEiPgoWc3RfYWN0aXZlX3NraWxs",
           "X2NvbmZpZxIkCgVkYXRhcxgBIAMoCzIVLnN0X2FjdGl2ZV9za2lsbF9kYXRh",
           "ItkBChBzdF9hY3Rpdml0eV9kYXRhEhIKCmFjdGl2aXR5SWQYASABKBESFQoN",
-          "c2hvd0JlZ2luVGltZRgCIAEoDBIRCgliZWdpblRpbWUYAyABKAwSDwoHZW5k",
-          "VGltZRgEIAEoDBITCgtzaG93RW5kVGltZRgFIAEoDBIQCghpc0dsb2JhbBgG",
+          "c2hvd0JlZ2luVGltZRgCIAEoCRIRCgliZWdpblRpbWUYAyABKAkSDwoHZW5k",
+          "VGltZRgEIAEoCRITCgtzaG93RW5kVGltZRgFIAEoCRIQCghpc0dsb2JhbBgG",
           "IAEoERITCgtpc09wZXJhdGlvbhgHIAEoERIVCg1vcGVuQ29uZGl0aW9uGAgg",
-          "ASgMEhIKCmRlbWFuZFR5cGUYCSABKAwSDwoHcmVndWxhchgKIAEoDCI2ChJz",
+          "ASgJEhIKCmRlbWFuZFR5cGUYCSADKAUSDwoHcmVndWxhchgKIAEoCSI2ChJz",
           "dF9hY3Rpdml0eV9jb25maWcSIAoFZGF0YXMYASADKAsyES5zdF9hY3Rpdml0",
           "eV9kYXRhIu8CChhzdF9hY3Rpdml0eV9kZXRhaWxzX2RhdGESEgoKYWN0aXZp",
-          "dHlJZBgBIAEoERISCgp0ZW1wbGF0ZUlkGAIgASgREgwKBG5hbWUYAyABKAwS",
-          "DAoEZGVzYxgEIAEoDBIQCghydWxlRGVzYxgFIAEoDBIMCgRpY29uGAYgASgM",
-          "Eg4KBmJhbm5lchgHIAEoDBIOCgZ3aW5kb3cYCCABKAwSEAoIaGlkZVRpbWUY",
+          "dHlJZBgBIAEoERISCgp0ZW1wbGF0ZUlkGAIgASgREgwKBG5hbWUYAyABKAkS",
+          "DAoEZGVzYxgEIAEoCRIQCghydWxlRGVzYxgFIAEoCRIMCgRpY29uGAYgASgJ",
+          "Eg4KBmJhbm5lchgHIAEoCRIOCgZ3aW5kb3cYCCABKAkSEAoIaGlkZVRpbWUY",
           "CSABKBESGAoQc2hvd0luTWFpbldpbmRvdxgKIAEoERIRCgljb25kaXRpb24Y",
-          "CyADKAwSDAoEdGltZRgMIAEoERIMCgRyYXRlGA0gASgREg0KBWNvbG9yGA4g",
+          "CyADKAkSDAoEdGltZRgMIAEoERIMCgRyYXRlGA0gASgREg0KBWNvbG9yGA4g",
           "ASgREhEKCWV4dHJhSWNvbhgPIAEoERIQCghwb3NpdGlvbhgQIAEoERINCgVv",
           "cmRlchgRIAEoERIPCgd0b3BTb3J0GBIgASgREgwKBGp1bXAYEyABKBESEgoK",
-          "anVtcERldGFpbBgUIAMoDCJGChpzdF9hY3Rpdml0eV9kZXRhaWxzX2NvbmZp",
+          "anVtcERldGFpbBgUIAMoCSJGChpzdF9hY3Rpdml0eV9kZXRhaWxzX2NvbmZp",
           "ZxIoCgVkYXRhcxgBIAMoCzIZLnN0X2FjdGl2aXR5X2RldGFpbHNfZGF0YSJT",
           "Ch5zdF9hY3Rpdml0eV9nbG9iYWxfY29uZmlnX2RhdGESCgoCSUQYASABKBES",
-          "EgoKY29uZmlnTmFtZRgCIAEoDBIRCglwYXJhbWV0ZXIYAyABKAwiUgogc3Rf",
+          "EgoKY29uZmlnTmFtZRgCIAEoCRIRCglwYXJhbWV0ZXIYAyABKAkiUgogc3Rf",
           "YWN0aXZpdHlfZ2xvYmFsX2NvbmZpZ19jb25maWcSLgoFZGF0YXMYASADKAsy",
           "Hy5zdF9hY3Rpdml0eV9nbG9iYWxfY29uZmlnX2RhdGEiLwohc3RfYWN0aXZp",
           "dHlfcGFydGljaXBhdGVfdHlwZV9kYXRhEgoKAklEGAEgASgRIlgKI3N0X2Fj",
@@ -61,34 +61,34 @@ public static partial class ClientDataReflection {
           "dml0eV9yYW5rX3R5cGVfZGF0YSLXAQoec3RfYWN0aXZpdHlfc2V2ZW5kYXlf",
           "dGFza19kYXRhEg4KBnRhc2tJZBgBIAEoERILCgNkYXkYAiABKBESEQoJdGFz",
           "a0dyb3VwGAMgASgREhIKCmRlbWFuZFR5cGUYBCABKBESEwoLZGVtYW5kUGFy",
-          "YTEYBSABKBESEwoLZGVtYW5kUGFyYTIYBiABKAwSFAoMdGFza1NjaGVkdWxl",
-          "GAcgASgREhIKCnRhcmdldERlc2MYCCABKAwSDgoGcmV3YXJkGAkgAygMEg0K",
+          "YTEYBSABKBESEwoLZGVtYW5kUGFyYTIYBiABKAkSFAoMdGFza1NjaGVkdWxl",
+          "GAcgASgREhIKCnRhcmdldERlc2MYCCABKAkSDgoGcmV3YXJkGAkgAygJEg0K",
           "BW9yZGVyGAogASgRIlIKIHN0X2FjdGl2aXR5X3NldmVuZGF5X3Rhc2tfY29u",
           "ZmlnEi4KBWRhdGFzGAEgAygLMh8uc3RfYWN0aXZpdHlfc2V2ZW5kYXlfdGFz",
           "a19kYXRhIqECCh1zdF9hY3Rpdml0eV9zdWJfYWN0aXZpdHlfZGF0YRIVCg1z",
           "dWJBY3Rpdml0eUlkGAEgASgREhIKCmFjdGl2aXR5SWQYAiABKBESDQoFc3Vi",
-          "SWQYAyABKBESHAoUcGFydGljaXBhdGVDb25kaXRpb24YBCABKAwSGQoRcGFy",
-          "dGljaXBhdGVSZXdhcmQYBSADKAwSEgoKZGVtYW5kVHlwZRgGIAEoERITCgtk",
-          "ZW1hbmRQYXJhMRgHIAEoERITCgtkZW1hbmRQYXJhMhgIIAEoDBIUCgx0YXNr",
-          "U2NoZWR1bGUYCSABKBESDgoGcmV3YXJkGAogAygMEhMKC2V4dHJhUGFyYW1z",
-          "GAsgASgMEhQKDGdsb2JhbENvbmZpZxgMIAEoESJQCh9zdF9hY3Rpdml0eV9z",
+          "SWQYAyABKBESHAoUcGFydGljaXBhdGVDb25kaXRpb24YBCABKAkSGQoRcGFy",
+          "dGljaXBhdGVSZXdhcmQYBSADKAkSEgoKZGVtYW5kVHlwZRgGIAEoERITCgtk",
+          "ZW1hbmRQYXJhMRgHIAEoERITCgtkZW1hbmRQYXJhMhgIIAEoCRIUCgx0YXNr",
+          "U2NoZWR1bGUYCSABKBESDgoGcmV3YXJkGAogAygJEhMKC2V4dHJhUGFyYW1z",
+          "GAsgASgJEhQKDGdsb2JhbENvbmZpZxgMIAEoESJQCh9zdF9hY3Rpdml0eV9z",
           "dWJfYWN0aXZpdHlfY29uZmlnEi0KBWRhdGFzGAEgAygLMh4uc3RfYWN0aXZp",
           "dHlfc3ViX2FjdGl2aXR5X2RhdGEiRQogc3RfYWN0aXZpdHlfdGFza19ncm91",
           "cF9kZXNjX2RhdGESEwoLdGFza0dyb3VwSWQYASABKBESDAoEZGVzYxgCIAEo",
-          "DCJWCiJzdF9hY3Rpdml0eV90YXNrX2dyb3VwX2Rlc2NfY29uZmlnEjAKBWRh",
+          "CSJWCiJzdF9hY3Rpdml0eV90YXNrX2dyb3VwX2Rlc2NfY29uZmlnEjAKBWRh",
           "dGFzGAEgAygLMiEuc3RfYWN0aXZpdHlfdGFza19ncm91cF9kZXNjX2RhdGEi",
           "MQoRc3RfYWR2ZW50dXJlX2RhdGESCgoCSUQYASABKBESEAoIYmVoYXZpb3IY",
-          "AiABKAwiOAoTc3RfYWR2ZW50dXJlX2NvbmZpZxIhCgVkYXRhcxgBIAMoCzIS",
+          "AiABKAkiOAoTc3RfYWR2ZW50dXJlX2NvbmZpZxIhCgVkYXRhcxgBIAMoCzIS",
           "LnN0X2FkdmVudHVyZV9kYXRhIjIKD3N0X2FsY2hlbXlfZGF0YRIKCgJJRBgB",
           "IAEoERITCgt0cmVhdEVmZmVjdBgCIAEoESI0ChFzdF9hbGNoZW15X2NvbmZp",
           "ZxIfCgVkYXRhcxgBIAMoCzIQLnN0X2FsY2hlbXlfZGF0YSJtChxzdF9hbGxp",
           "YW5jZV9jcmVhdGVwcmljZV9kYXRhEgoKAklEGAEgASgREhMKC3N0YXRlTnVt",
-          "YmVyGAIgASgMEg8KB2NvbnN1bWUYAyABKBESGwoTZGlzY291bnRDb2VmZmlj",
+          "YmVyGAIgAygFEg8KB2NvbnN1bWUYAyABKBESGwoTZGlzY291bnRDb2VmZmlj",
           "aWVudBgEIAEoESJOCh5zdF9hbGxpYW5jZV9jcmVhdGVwcmljZV9jb25maWcS",
           "LAoFZGF0YXMYASADKAsyHS5zdF9hbGxpYW5jZV9jcmVhdGVwcmljZV9kYXRh",
           "IocBChVzdF9hbGxpYW5jZV9mbGFnX2RhdGESCgoCSUQYASABKBESDQoFc3R5",
-          "bGUYAiABKBESEAoIcGljdHVyZTEYAyABKAwSEAoIcGljdHVyZTIYBCABKAwS",
-          "DQoFaWNvbjEYBSABKAwSDQoFaWNvbjIYBiABKAwSEQoJY29uZGl0aW9uGAcg",
+          "bGUYAiABKBESEAoIcGljdHVyZTEYAyABKAkSEAoIcGljdHVyZTIYBCABKAkS",
+          "DQoFaWNvbjEYBSABKAkSDQoFaWNvbjIYBiABKAkSEQoJY29uZGl0aW9uGAcg",
           "ASgRIkAKF3N0X2FsbGlhbmNlX2ZsYWdfY29uZmlnEiUKBWRhdGFzGAEgAygL",
           "MhYuc3RfYWxsaWFuY2VfZmxhZ19kYXRhQgJIA2IGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -182,9 +182,9 @@ public sealed partial class st_action_sound_data : pb::IMessage<st_action_sound_
 
   /// <summary>Field number for the "actionSound" field.</summary>
   public const int ActionSoundFieldNumber = 2;
-  private pb::ByteString actionSound_ = pb::ByteString.Empty;
+  private string actionSound_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString ActionSound {
+  public string ActionSound {
     get { return actionSound_; }
     set {
       actionSound_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -236,7 +236,7 @@ public sealed partial class st_action_sound_data : pb::IMessage<st_action_sound_
     }
     if (ActionSound.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(ActionSound);
+      output.WriteString(ActionSound);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -253,7 +253,7 @@ public sealed partial class st_action_sound_data : pb::IMessage<st_action_sound_
     }
     if (ActionSound.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(ActionSound);
+      output.WriteString(ActionSound);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -268,7 +268,7 @@ public sealed partial class st_action_sound_data : pb::IMessage<st_action_sound_
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(ID);
     }
     if (ActionSound.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(ActionSound);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(ActionSound);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -306,7 +306,7 @@ public sealed partial class st_action_sound_data : pb::IMessage<st_action_sound_
           break;
         }
         case 18: {
-          ActionSound = input.ReadBytes();
+          ActionSound = input.ReadString();
           break;
         }
       }
@@ -328,7 +328,7 @@ public sealed partial class st_action_sound_data : pb::IMessage<st_action_sound_
           break;
         }
         case 18: {
-          ActionSound = input.ReadBytes();
+          ActionSound = input.ReadString();
           break;
         }
       }
@@ -963,9 +963,9 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
 
   /// <summary>Field number for the "name" field.</summary>
   public const int NameFieldNumber = 2;
-  private pb::ByteString name_ = pb::ByteString.Empty;
+  private string name_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Name {
+  public string Name {
     get { return name_; }
     set {
       name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -974,9 +974,9 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
 
   /// <summary>Field number for the "des" field.</summary>
   public const int DesFieldNumber = 3;
-  private pb::ByteString des_ = pb::ByteString.Empty;
+  private string des_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Des {
+  public string Des {
     get { return des_; }
     set {
       des_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -996,31 +996,31 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
 
   /// <summary>Field number for the "value" field.</summary>
   public const int ValueFieldNumber = 5;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_value_codec
-      = pb::FieldCodec.ForBytes(42);
-  private readonly pbc::RepeatedField<pb::ByteString> value_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_value_codec
+      = pb::FieldCodec.ForString(42);
+  private readonly pbc::RepeatedField<string> value_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> Value {
+  public pbc::RepeatedField<string> Value {
     get { return value_; }
   }
 
   /// <summary>Field number for the "condition" field.</summary>
   public const int ConditionFieldNumber = 6;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_condition_codec
-      = pb::FieldCodec.ForBytes(50);
-  private readonly pbc::RepeatedField<pb::ByteString> condition_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_condition_codec
+      = pb::FieldCodec.ForString(50);
+  private readonly pbc::RepeatedField<string> condition_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> Condition {
+  public pbc::RepeatedField<string> Condition {
     get { return condition_; }
   }
 
   /// <summary>Field number for the "cost" field.</summary>
   public const int CostFieldNumber = 7;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_cost_codec
-      = pb::FieldCodec.ForBytes(58);
-  private readonly pbc::RepeatedField<pb::ByteString> cost_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_cost_codec
+      = pb::FieldCodec.ForString(58);
+  private readonly pbc::RepeatedField<string> cost_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> Cost {
+  public pbc::RepeatedField<string> Cost {
     get { return cost_; }
   }
 
@@ -1105,11 +1105,11 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
     }
     if (Name.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(Name);
+      output.WriteString(Name);
     }
     if (Des.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Des);
+      output.WriteString(Des);
     }
     if (CD != 0) {
       output.WriteRawTag(32);
@@ -1141,11 +1141,11 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
     }
     if (Name.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(Name);
+      output.WriteString(Name);
     }
     if (Des.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Des);
+      output.WriteString(Des);
     }
     if (CD != 0) {
       output.WriteRawTag(32);
@@ -1175,10 +1175,10 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(ID);
     }
     if (Name.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Name);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
     }
     if (Des.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Des);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Des);
     }
     if (CD != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(CD);
@@ -1243,11 +1243,11 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
           break;
         }
         case 18: {
-          Name = input.ReadBytes();
+          Name = input.ReadString();
           break;
         }
         case 26: {
-          Des = input.ReadBytes();
+          Des = input.ReadString();
           break;
         }
         case 32: {
@@ -1293,11 +1293,11 @@ public sealed partial class st_active_skill_data : pb::IMessage<st_active_skill_
           break;
         }
         case 18: {
-          Name = input.ReadBytes();
+          Name = input.ReadString();
           break;
         }
         case 26: {
-          Des = input.ReadBytes();
+          Des = input.ReadString();
           break;
         }
         case 32: {
@@ -1529,7 +1529,7 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     isGlobal_ = other.isGlobal_;
     isOperation_ = other.isOperation_;
     openCondition_ = other.openCondition_;
-    demandType_ = other.demandType_;
+    demandType_ = other.demandType_.Clone();
     regular_ = other.regular_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
@@ -1552,9 +1552,9 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
 
   /// <summary>Field number for the "showBeginTime" field.</summary>
   public const int ShowBeginTimeFieldNumber = 2;
-  private pb::ByteString showBeginTime_ = pb::ByteString.Empty;
+  private string showBeginTime_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString ShowBeginTime {
+  public string ShowBeginTime {
     get { return showBeginTime_; }
     set {
       showBeginTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -1563,9 +1563,9 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
 
   /// <summary>Field number for the "beginTime" field.</summary>
   public const int BeginTimeFieldNumber = 3;
-  private pb::ByteString beginTime_ = pb::ByteString.Empty;
+  private string beginTime_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString BeginTime {
+  public string BeginTime {
     get { return beginTime_; }
     set {
       beginTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -1574,9 +1574,9 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
 
   /// <summary>Field number for the "endTime" field.</summary>
   public const int EndTimeFieldNumber = 4;
-  private pb::ByteString endTime_ = pb::ByteString.Empty;
+  private string endTime_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString EndTime {
+  public string EndTime {
     get { return endTime_; }
     set {
       endTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -1585,9 +1585,9 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
 
   /// <summary>Field number for the "showEndTime" field.</summary>
   public const int ShowEndTimeFieldNumber = 5;
-  private pb::ByteString showEndTime_ = pb::ByteString.Empty;
+  private string showEndTime_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString ShowEndTime {
+  public string ShowEndTime {
     get { return showEndTime_; }
     set {
       showEndTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -1618,9 +1618,9 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
 
   /// <summary>Field number for the "openCondition" field.</summary>
   public const int OpenConditionFieldNumber = 8;
-  private pb::ByteString openCondition_ = pb::ByteString.Empty;
+  private string openCondition_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString OpenCondition {
+  public string OpenCondition {
     get { return openCondition_; }
     set {
       openCondition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -1629,20 +1629,19 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
 
   /// <summary>Field number for the "demandType" field.</summary>
   public const int DemandTypeFieldNumber = 9;
-  private pb::ByteString demandType_ = pb::ByteString.Empty;
+  private static readonly pb::FieldCodec<int> _repeated_demandType_codec
+      = pb::FieldCodec.ForInt32(74);
+  private readonly pbc::RepeatedField<int> demandType_ = new pbc::RepeatedField<int>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString DemandType {
+  public pbc::RepeatedField<int> DemandType {
     get { return demandType_; }
-    set {
-      demandType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
   }
 
   /// <summary>Field number for the "regular" field.</summary>
   public const int RegularFieldNumber = 10;
-  private pb::ByteString regular_ = pb::ByteString.Empty;
+  private string regular_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Regular {
+  public string Regular {
     get { return regular_; }
     set {
       regular_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -1670,7 +1669,7 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     if (IsGlobal != other.IsGlobal) return false;
     if (IsOperation != other.IsOperation) return false;
     if (OpenCondition != other.OpenCondition) return false;
-    if (DemandType != other.DemandType) return false;
+    if(!demandType_.Equals(other.demandType_)) return false;
     if (Regular != other.Regular) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
@@ -1686,7 +1685,7 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     if (IsGlobal != 0) hash ^= IsGlobal.GetHashCode();
     if (IsOperation != 0) hash ^= IsOperation.GetHashCode();
     if (OpenCondition.Length != 0) hash ^= OpenCondition.GetHashCode();
-    if (DemandType.Length != 0) hash ^= DemandType.GetHashCode();
+    hash ^= demandType_.GetHashCode();
     if (Regular.Length != 0) hash ^= Regular.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -1710,19 +1709,19 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     }
     if (ShowBeginTime.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(ShowBeginTime);
+      output.WriteString(ShowBeginTime);
     }
     if (BeginTime.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(BeginTime);
+      output.WriteString(BeginTime);
     }
     if (EndTime.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(EndTime);
+      output.WriteString(EndTime);
     }
     if (ShowEndTime.Length != 0) {
       output.WriteRawTag(42);
-      output.WriteBytes(ShowEndTime);
+      output.WriteString(ShowEndTime);
     }
     if (IsGlobal != 0) {
       output.WriteRawTag(48);
@@ -1734,15 +1733,12 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     }
     if (OpenCondition.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(OpenCondition);
+      output.WriteString(OpenCondition);
     }
-    if (DemandType.Length != 0) {
-      output.WriteRawTag(74);
-      output.WriteBytes(DemandType);
-    }
+    demandType_.WriteTo(output, _repeated_demandType_codec);
     if (Regular.Length != 0) {
       output.WriteRawTag(82);
-      output.WriteBytes(Regular);
+      output.WriteString(Regular);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -1759,19 +1755,19 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     }
     if (ShowBeginTime.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(ShowBeginTime);
+      output.WriteString(ShowBeginTime);
     }
     if (BeginTime.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(BeginTime);
+      output.WriteString(BeginTime);
     }
     if (EndTime.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(EndTime);
+      output.WriteString(EndTime);
     }
     if (ShowEndTime.Length != 0) {
       output.WriteRawTag(42);
-      output.WriteBytes(ShowEndTime);
+      output.WriteString(ShowEndTime);
     }
     if (IsGlobal != 0) {
       output.WriteRawTag(48);
@@ -1783,15 +1779,12 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     }
     if (OpenCondition.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(OpenCondition);
+      output.WriteString(OpenCondition);
     }
-    if (DemandType.Length != 0) {
-      output.WriteRawTag(74);
-      output.WriteBytes(DemandType);
-    }
+    demandType_.WriteTo(ref output, _repeated_demandType_codec);
     if (Regular.Length != 0) {
       output.WriteRawTag(82);
-      output.WriteBytes(Regular);
+      output.WriteString(Regular);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -1806,16 +1799,16 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(ActivityId);
     }
     if (ShowBeginTime.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShowBeginTime);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(ShowBeginTime);
     }
     if (BeginTime.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(BeginTime);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(BeginTime);
     }
     if (EndTime.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(EndTime);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(EndTime);
     }
     if (ShowEndTime.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(ShowEndTime);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(ShowEndTime);
     }
     if (IsGlobal != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(IsGlobal);
@@ -1824,13 +1817,11 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(IsOperation);
     }
     if (OpenCondition.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(OpenCondition);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(OpenCondition);
     }
-    if (DemandType.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(DemandType);
-    }
+    size += demandType_.CalculateSize(_repeated_demandType_codec);
     if (Regular.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Regular);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Regular);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1867,9 +1858,7 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
     if (other.OpenCondition.Length != 0) {
       OpenCondition = other.OpenCondition;
     }
-    if (other.DemandType.Length != 0) {
-      DemandType = other.DemandType;
-    }
+    demandType_.Add(other.demandType_);
     if (other.Regular.Length != 0) {
       Regular = other.Regular;
     }
@@ -1892,19 +1881,19 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
           break;
         }
         case 18: {
-          ShowBeginTime = input.ReadBytes();
+          ShowBeginTime = input.ReadString();
           break;
         }
         case 26: {
-          BeginTime = input.ReadBytes();
+          BeginTime = input.ReadString();
           break;
         }
         case 34: {
-          EndTime = input.ReadBytes();
+          EndTime = input.ReadString();
           break;
         }
         case 42: {
-          ShowEndTime = input.ReadBytes();
+          ShowEndTime = input.ReadString();
           break;
         }
         case 48: {
@@ -1916,15 +1905,16 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
           break;
         }
         case 66: {
-          OpenCondition = input.ReadBytes();
+          OpenCondition = input.ReadString();
           break;
         }
-        case 74: {
-          DemandType = input.ReadBytes();
+        case 74:
+        case 72: {
+          demandType_.AddEntriesFrom(input, _repeated_demandType_codec);
           break;
         }
         case 82: {
-          Regular = input.ReadBytes();
+          Regular = input.ReadString();
           break;
         }
       }
@@ -1946,19 +1936,19 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
           break;
         }
         case 18: {
-          ShowBeginTime = input.ReadBytes();
+          ShowBeginTime = input.ReadString();
           break;
         }
         case 26: {
-          BeginTime = input.ReadBytes();
+          BeginTime = input.ReadString();
           break;
         }
         case 34: {
-          EndTime = input.ReadBytes();
+          EndTime = input.ReadString();
           break;
         }
         case 42: {
-          ShowEndTime = input.ReadBytes();
+          ShowEndTime = input.ReadString();
           break;
         }
         case 48: {
@@ -1970,15 +1960,16 @@ public sealed partial class st_activity_data : pb::IMessage<st_activity_data>
           break;
         }
         case 66: {
-          OpenCondition = input.ReadBytes();
+          OpenCondition = input.ReadString();
           break;
         }
-        case 74: {
-          DemandType = input.ReadBytes();
+        case 74:
+        case 72: {
+          demandType_.AddEntriesFrom(ref input, _repeated_demandType_codec);
           break;
         }
         case 82: {
-          Regular = input.ReadBytes();
+          Regular = input.ReadString();
           break;
         }
       }
@@ -2230,9 +2221,9 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "name" field.</summary>
   public const int NameFieldNumber = 3;
-  private pb::ByteString name_ = pb::ByteString.Empty;
+  private string name_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Name {
+  public string Name {
     get { return name_; }
     set {
       name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -2241,9 +2232,9 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "desc" field.</summary>
   public const int DescFieldNumber = 4;
-  private pb::ByteString desc_ = pb::ByteString.Empty;
+  private string desc_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Desc {
+  public string Desc {
     get { return desc_; }
     set {
       desc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -2252,9 +2243,9 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "ruleDesc" field.</summary>
   public const int RuleDescFieldNumber = 5;
-  private pb::ByteString ruleDesc_ = pb::ByteString.Empty;
+  private string ruleDesc_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString RuleDesc {
+  public string RuleDesc {
     get { return ruleDesc_; }
     set {
       ruleDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -2263,9 +2254,9 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "icon" field.</summary>
   public const int IconFieldNumber = 6;
-  private pb::ByteString icon_ = pb::ByteString.Empty;
+  private string icon_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Icon {
+  public string Icon {
     get { return icon_; }
     set {
       icon_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -2274,9 +2265,9 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "banner" field.</summary>
   public const int BannerFieldNumber = 7;
-  private pb::ByteString banner_ = pb::ByteString.Empty;
+  private string banner_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Banner {
+  public string Banner {
     get { return banner_; }
     set {
       banner_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -2285,9 +2276,9 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "window" field.</summary>
   public const int WindowFieldNumber = 8;
-  private pb::ByteString window_ = pb::ByteString.Empty;
+  private string window_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Window {
+  public string Window {
     get { return window_; }
     set {
       window_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -2318,11 +2309,11 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "condition" field.</summary>
   public const int ConditionFieldNumber = 11;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_condition_codec
-      = pb::FieldCodec.ForBytes(90);
-  private readonly pbc::RepeatedField<pb::ByteString> condition_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_condition_codec
+      = pb::FieldCodec.ForString(90);
+  private readonly pbc::RepeatedField<string> condition_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> Condition {
+  public pbc::RepeatedField<string> Condition {
     get { return condition_; }
   }
 
@@ -2416,11 +2407,11 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
 
   /// <summary>Field number for the "jumpDetail" field.</summary>
   public const int JumpDetailFieldNumber = 20;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_jumpDetail_codec
-      = pb::FieldCodec.ForBytes(162);
-  private readonly pbc::RepeatedField<pb::ByteString> jumpDetail_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_jumpDetail_codec
+      = pb::FieldCodec.ForString(162);
+  private readonly pbc::RepeatedField<string> jumpDetail_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> JumpDetail {
+  public pbc::RepeatedField<string> JumpDetail {
     get { return jumpDetail_; }
   }
 
@@ -2509,27 +2500,27 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
     }
     if (Name.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Name);
+      output.WriteString(Name);
     }
     if (Desc.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(Desc);
+      output.WriteString(Desc);
     }
     if (RuleDesc.Length != 0) {
       output.WriteRawTag(42);
-      output.WriteBytes(RuleDesc);
+      output.WriteString(RuleDesc);
     }
     if (Icon.Length != 0) {
       output.WriteRawTag(50);
-      output.WriteBytes(Icon);
+      output.WriteString(Icon);
     }
     if (Banner.Length != 0) {
       output.WriteRawTag(58);
-      output.WriteBytes(Banner);
+      output.WriteString(Banner);
     }
     if (Window.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(Window);
+      output.WriteString(Window);
     }
     if (HideTime != 0) {
       output.WriteRawTag(72);
@@ -2592,27 +2583,27 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
     }
     if (Name.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Name);
+      output.WriteString(Name);
     }
     if (Desc.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(Desc);
+      output.WriteString(Desc);
     }
     if (RuleDesc.Length != 0) {
       output.WriteRawTag(42);
-      output.WriteBytes(RuleDesc);
+      output.WriteString(RuleDesc);
     }
     if (Icon.Length != 0) {
       output.WriteRawTag(50);
-      output.WriteBytes(Icon);
+      output.WriteString(Icon);
     }
     if (Banner.Length != 0) {
       output.WriteRawTag(58);
-      output.WriteBytes(Banner);
+      output.WriteString(Banner);
     }
     if (Window.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(Window);
+      output.WriteString(Window);
     }
     if (HideTime != 0) {
       output.WriteRawTag(72);
@@ -2672,22 +2663,22 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(TemplateId);
     }
     if (Name.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Name);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
     }
     if (Desc.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Desc);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Desc);
     }
     if (RuleDesc.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(RuleDesc);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(RuleDesc);
     }
     if (Icon.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Icon);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon);
     }
     if (Banner.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Banner);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Banner);
     }
     if (Window.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Window);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Window);
     }
     if (HideTime != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(HideTime);
@@ -2811,27 +2802,27 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
           break;
         }
         case 26: {
-          Name = input.ReadBytes();
+          Name = input.ReadString();
           break;
         }
         case 34: {
-          Desc = input.ReadBytes();
+          Desc = input.ReadString();
           break;
         }
         case 42: {
-          RuleDesc = input.ReadBytes();
+          RuleDesc = input.ReadString();
           break;
         }
         case 50: {
-          Icon = input.ReadBytes();
+          Icon = input.ReadString();
           break;
         }
         case 58: {
-          Banner = input.ReadBytes();
+          Banner = input.ReadString();
           break;
         }
         case 66: {
-          Window = input.ReadBytes();
+          Window = input.ReadString();
           break;
         }
         case 72: {
@@ -2905,27 +2896,27 @@ public sealed partial class st_activity_details_data : pb::IMessage<st_activity_
           break;
         }
         case 26: {
-          Name = input.ReadBytes();
+          Name = input.ReadString();
           break;
         }
         case 34: {
-          Desc = input.ReadBytes();
+          Desc = input.ReadString();
           break;
         }
         case 42: {
-          RuleDesc = input.ReadBytes();
+          RuleDesc = input.ReadString();
           break;
         }
         case 50: {
-          Icon = input.ReadBytes();
+          Icon = input.ReadString();
           break;
         }
         case 58: {
-          Banner = input.ReadBytes();
+          Banner = input.ReadString();
           break;
         }
         case 66: {
-          Window = input.ReadBytes();
+          Window = input.ReadString();
           break;
         }
         case 72: {
@@ -3197,9 +3188,9 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
 
   /// <summary>Field number for the "configName" field.</summary>
   public const int ConfigNameFieldNumber = 2;
-  private pb::ByteString configName_ = pb::ByteString.Empty;
+  private string configName_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString ConfigName {
+  public string ConfigName {
     get { return configName_; }
     set {
       configName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -3208,9 +3199,9 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
 
   /// <summary>Field number for the "parameter" field.</summary>
   public const int ParameterFieldNumber = 3;
-  private pb::ByteString parameter_ = pb::ByteString.Empty;
+  private string parameter_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Parameter {
+  public string Parameter {
     get { return parameter_; }
     set {
       parameter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -3264,11 +3255,11 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
     }
     if (ConfigName.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(ConfigName);
+      output.WriteString(ConfigName);
     }
     if (Parameter.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Parameter);
+      output.WriteString(Parameter);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -3285,11 +3276,11 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
     }
     if (ConfigName.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(ConfigName);
+      output.WriteString(ConfigName);
     }
     if (Parameter.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Parameter);
+      output.WriteString(Parameter);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -3304,10 +3295,10 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(ID);
     }
     if (ConfigName.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(ConfigName);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(ConfigName);
     }
     if (Parameter.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Parameter);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Parameter);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -3348,11 +3339,11 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
           break;
         }
         case 18: {
-          ConfigName = input.ReadBytes();
+          ConfigName = input.ReadString();
           break;
         }
         case 26: {
-          Parameter = input.ReadBytes();
+          Parameter = input.ReadString();
           break;
         }
       }
@@ -3374,11 +3365,11 @@ public sealed partial class st_activity_global_config_data : pb::IMessage<st_act
           break;
         }
         case 18: {
-          ConfigName = input.ReadBytes();
+          ConfigName = input.ReadString();
           break;
         }
         case 26: {
-          Parameter = input.ReadBytes();
+          Parameter = input.ReadString();
           break;
         }
       }
@@ -4319,9 +4310,9 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
 
   /// <summary>Field number for the "demandPara2" field.</summary>
   public const int DemandPara2FieldNumber = 6;
-  private pb::ByteString demandPara2_ = pb::ByteString.Empty;
+  private string demandPara2_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString DemandPara2 {
+  public string DemandPara2 {
     get { return demandPara2_; }
     set {
       demandPara2_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -4341,9 +4332,9 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
 
   /// <summary>Field number for the "targetDesc" field.</summary>
   public const int TargetDescFieldNumber = 8;
-  private pb::ByteString targetDesc_ = pb::ByteString.Empty;
+  private string targetDesc_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString TargetDesc {
+  public string TargetDesc {
     get { return targetDesc_; }
     set {
       targetDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -4352,11 +4343,11 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
 
   /// <summary>Field number for the "reward" field.</summary>
   public const int RewardFieldNumber = 9;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_reward_codec
-      = pb::FieldCodec.ForBytes(74);
-  private readonly pbc::RepeatedField<pb::ByteString> reward_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_reward_codec
+      = pb::FieldCodec.ForString(74);
+  private readonly pbc::RepeatedField<string> reward_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> Reward {
+  public pbc::RepeatedField<string> Reward {
     get { return reward_; }
   }
 
@@ -4448,7 +4439,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
     }
     if (DemandPara2.Length != 0) {
       output.WriteRawTag(50);
-      output.WriteBytes(DemandPara2);
+      output.WriteString(DemandPara2);
     }
     if (TaskSchedule != 0) {
       output.WriteRawTag(56);
@@ -4456,7 +4447,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
     }
     if (TargetDesc.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(TargetDesc);
+      output.WriteString(TargetDesc);
     }
     reward_.WriteTo(output, _repeated_reward_codec);
     if (Order != 0) {
@@ -4494,7 +4485,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
     }
     if (DemandPara2.Length != 0) {
       output.WriteRawTag(50);
-      output.WriteBytes(DemandPara2);
+      output.WriteString(DemandPara2);
     }
     if (TaskSchedule != 0) {
       output.WriteRawTag(56);
@@ -4502,7 +4493,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
     }
     if (TargetDesc.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(TargetDesc);
+      output.WriteString(TargetDesc);
     }
     reward_.WriteTo(ref output, _repeated_reward_codec);
     if (Order != 0) {
@@ -4534,13 +4525,13 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(DemandPara1);
     }
     if (DemandPara2.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(DemandPara2);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(DemandPara2);
     }
     if (TaskSchedule != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(TaskSchedule);
     }
     if (TargetDesc.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(TargetDesc);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetDesc);
     }
     size += reward_.CalculateSize(_repeated_reward_codec);
     if (Order != 0) {
@@ -4620,7 +4611,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
           break;
         }
         case 50: {
-          DemandPara2 = input.ReadBytes();
+          DemandPara2 = input.ReadString();
           break;
         }
         case 56: {
@@ -4628,7 +4619,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
           break;
         }
         case 66: {
-          TargetDesc = input.ReadBytes();
+          TargetDesc = input.ReadString();
           break;
         }
         case 74: {
@@ -4674,7 +4665,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
           break;
         }
         case 50: {
-          DemandPara2 = input.ReadBytes();
+          DemandPara2 = input.ReadString();
           break;
         }
         case 56: {
@@ -4682,7 +4673,7 @@ public sealed partial class st_activity_sevenday_task_data : pb::IMessage<st_act
           break;
         }
         case 66: {
-          TargetDesc = input.ReadBytes();
+          TargetDesc = input.ReadString();
           break;
         }
         case 74: {
@@ -4945,9 +4936,9 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
 
   /// <summary>Field number for the "participateCondition" field.</summary>
   public const int ParticipateConditionFieldNumber = 4;
-  private pb::ByteString participateCondition_ = pb::ByteString.Empty;
+  private string participateCondition_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString ParticipateCondition {
+  public string ParticipateCondition {
     get { return participateCondition_; }
     set {
       participateCondition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -4956,11 +4947,11 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
 
   /// <summary>Field number for the "participateReward" field.</summary>
   public const int ParticipateRewardFieldNumber = 5;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_participateReward_codec
-      = pb::FieldCodec.ForBytes(42);
-  private readonly pbc::RepeatedField<pb::ByteString> participateReward_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_participateReward_codec
+      = pb::FieldCodec.ForString(42);
+  private readonly pbc::RepeatedField<string> participateReward_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> ParticipateReward {
+  public pbc::RepeatedField<string> ParticipateReward {
     get { return participateReward_; }
   }
 
@@ -4988,9 +4979,9 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
 
   /// <summary>Field number for the "demandPara2" field.</summary>
   public const int DemandPara2FieldNumber = 8;
-  private pb::ByteString demandPara2_ = pb::ByteString.Empty;
+  private string demandPara2_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString DemandPara2 {
+  public string DemandPara2 {
     get { return demandPara2_; }
     set {
       demandPara2_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -5010,19 +5001,19 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
 
   /// <summary>Field number for the "reward" field.</summary>
   public const int RewardFieldNumber = 10;
-  private static readonly pb::FieldCodec<pb::ByteString> _repeated_reward_codec
-      = pb::FieldCodec.ForBytes(82);
-  private readonly pbc::RepeatedField<pb::ByteString> reward_ = new pbc::RepeatedField<pb::ByteString>();
+  private static readonly pb::FieldCodec<string> _repeated_reward_codec
+      = pb::FieldCodec.ForString(82);
+  private readonly pbc::RepeatedField<string> reward_ = new pbc::RepeatedField<string>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<pb::ByteString> Reward {
+  public pbc::RepeatedField<string> Reward {
     get { return reward_; }
   }
 
   /// <summary>Field number for the "extraParams" field.</summary>
   public const int ExtraParamsFieldNumber = 11;
-  private pb::ByteString extraParams_ = pb::ByteString.Empty;
+  private string extraParams_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString ExtraParams {
+  public string ExtraParams {
     get { return extraParams_; }
     set {
       extraParams_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -5113,7 +5104,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
     }
     if (ParticipateCondition.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(ParticipateCondition);
+      output.WriteString(ParticipateCondition);
     }
     participateReward_.WriteTo(output, _repeated_participateReward_codec);
     if (DemandType != 0) {
@@ -5126,7 +5117,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
     }
     if (DemandPara2.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(DemandPara2);
+      output.WriteString(DemandPara2);
     }
     if (TaskSchedule != 0) {
       output.WriteRawTag(72);
@@ -5135,7 +5126,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
     reward_.WriteTo(output, _repeated_reward_codec);
     if (ExtraParams.Length != 0) {
       output.WriteRawTag(90);
-      output.WriteBytes(ExtraParams);
+      output.WriteString(ExtraParams);
     }
     if (GlobalConfig != 0) {
       output.WriteRawTag(96);
@@ -5164,7 +5155,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
     }
     if (ParticipateCondition.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(ParticipateCondition);
+      output.WriteString(ParticipateCondition);
     }
     participateReward_.WriteTo(ref output, _repeated_participateReward_codec);
     if (DemandType != 0) {
@@ -5177,7 +5168,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
     }
     if (DemandPara2.Length != 0) {
       output.WriteRawTag(66);
-      output.WriteBytes(DemandPara2);
+      output.WriteString(DemandPara2);
     }
     if (TaskSchedule != 0) {
       output.WriteRawTag(72);
@@ -5186,7 +5177,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
     reward_.WriteTo(ref output, _repeated_reward_codec);
     if (ExtraParams.Length != 0) {
       output.WriteRawTag(90);
-      output.WriteBytes(ExtraParams);
+      output.WriteString(ExtraParams);
     }
     if (GlobalConfig != 0) {
       output.WriteRawTag(96);
@@ -5211,7 +5202,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(SubId);
     }
     if (ParticipateCondition.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(ParticipateCondition);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(ParticipateCondition);
     }
     size += participateReward_.CalculateSize(_repeated_participateReward_codec);
     if (DemandType != 0) {
@@ -5221,14 +5212,14 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(DemandPara1);
     }
     if (DemandPara2.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(DemandPara2);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(DemandPara2);
     }
     if (TaskSchedule != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(TaskSchedule);
     }
     size += reward_.CalculateSize(_repeated_reward_codec);
     if (ExtraParams.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(ExtraParams);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(ExtraParams);
     }
     if (GlobalConfig != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(GlobalConfig);
@@ -5303,7 +5294,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
           break;
         }
         case 34: {
-          ParticipateCondition = input.ReadBytes();
+          ParticipateCondition = input.ReadString();
           break;
         }
         case 42: {
@@ -5319,7 +5310,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
           break;
         }
         case 66: {
-          DemandPara2 = input.ReadBytes();
+          DemandPara2 = input.ReadString();
           break;
         }
         case 72: {
@@ -5331,7 +5322,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
           break;
         }
         case 90: {
-          ExtraParams = input.ReadBytes();
+          ExtraParams = input.ReadString();
           break;
         }
         case 96: {
@@ -5365,7 +5356,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
           break;
         }
         case 34: {
-          ParticipateCondition = input.ReadBytes();
+          ParticipateCondition = input.ReadString();
           break;
         }
         case 42: {
@@ -5381,7 +5372,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
           break;
         }
         case 66: {
-          DemandPara2 = input.ReadBytes();
+          DemandPara2 = input.ReadString();
           break;
         }
         case 72: {
@@ -5393,7 +5384,7 @@ public sealed partial class st_activity_sub_activity_data : pb::IMessage<st_acti
           break;
         }
         case 90: {
-          ExtraParams = input.ReadBytes();
+          ExtraParams = input.ReadString();
           break;
         }
         case 96: {
@@ -5620,9 +5611,9 @@ public sealed partial class st_activity_task_group_desc_data : pb::IMessage<st_a
 
   /// <summary>Field number for the "desc" field.</summary>
   public const int DescFieldNumber = 2;
-  private pb::ByteString desc_ = pb::ByteString.Empty;
+  private string desc_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Desc {
+  public string Desc {
     get { return desc_; }
     set {
       desc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -5674,7 +5665,7 @@ public sealed partial class st_activity_task_group_desc_data : pb::IMessage<st_a
     }
     if (Desc.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(Desc);
+      output.WriteString(Desc);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -5691,7 +5682,7 @@ public sealed partial class st_activity_task_group_desc_data : pb::IMessage<st_a
     }
     if (Desc.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(Desc);
+      output.WriteString(Desc);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -5706,7 +5697,7 @@ public sealed partial class st_activity_task_group_desc_data : pb::IMessage<st_a
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(TaskGroupId);
     }
     if (Desc.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Desc);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Desc);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -5744,7 +5735,7 @@ public sealed partial class st_activity_task_group_desc_data : pb::IMessage<st_a
           break;
         }
         case 18: {
-          Desc = input.ReadBytes();
+          Desc = input.ReadString();
           break;
         }
       }
@@ -5766,7 +5757,7 @@ public sealed partial class st_activity_task_group_desc_data : pb::IMessage<st_a
           break;
         }
         case 18: {
-          Desc = input.ReadBytes();
+          Desc = input.ReadString();
           break;
         }
       }
@@ -5989,9 +5980,9 @@ public sealed partial class st_adventure_data : pb::IMessage<st_adventure_data>
 
   /// <summary>Field number for the "behavior" field.</summary>
   public const int BehaviorFieldNumber = 2;
-  private pb::ByteString behavior_ = pb::ByteString.Empty;
+  private string behavior_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Behavior {
+  public string Behavior {
     get { return behavior_; }
     set {
       behavior_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -6043,7 +6034,7 @@ public sealed partial class st_adventure_data : pb::IMessage<st_adventure_data>
     }
     if (Behavior.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(Behavior);
+      output.WriteString(Behavior);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -6060,7 +6051,7 @@ public sealed partial class st_adventure_data : pb::IMessage<st_adventure_data>
     }
     if (Behavior.Length != 0) {
       output.WriteRawTag(18);
-      output.WriteBytes(Behavior);
+      output.WriteString(Behavior);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -6075,7 +6066,7 @@ public sealed partial class st_adventure_data : pb::IMessage<st_adventure_data>
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(ID);
     }
     if (Behavior.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Behavior);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Behavior);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -6113,7 +6104,7 @@ public sealed partial class st_adventure_data : pb::IMessage<st_adventure_data>
           break;
         }
         case 18: {
-          Behavior = input.ReadBytes();
+          Behavior = input.ReadString();
           break;
         }
       }
@@ -6135,7 +6126,7 @@ public sealed partial class st_adventure_data : pb::IMessage<st_adventure_data>
           break;
         }
         case 18: {
-          Behavior = input.ReadBytes();
+          Behavior = input.ReadString();
           break;
         }
       }
@@ -6705,7 +6696,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public st_alliance_createprice_data(st_alliance_createprice_data other) : this() {
     iD_ = other.iD_;
-    stateNumber_ = other.stateNumber_;
+    stateNumber_ = other.stateNumber_.Clone();
     consume_ = other.consume_;
     discountCoefficient_ = other.discountCoefficient_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6729,13 +6720,12 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
 
   /// <summary>Field number for the "stateNumber" field.</summary>
   public const int StateNumberFieldNumber = 2;
-  private pb::ByteString stateNumber_ = pb::ByteString.Empty;
+  private static readonly pb::FieldCodec<int> _repeated_stateNumber_codec
+      = pb::FieldCodec.ForInt32(18);
+  private readonly pbc::RepeatedField<int> stateNumber_ = new pbc::RepeatedField<int>();
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString StateNumber {
+  public pbc::RepeatedField<int> StateNumber {
     get { return stateNumber_; }
-    set {
-      stateNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
   }
 
   /// <summary>Field number for the "consume" field.</summary>
@@ -6774,7 +6764,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
       return true;
     }
     if (ID != other.ID) return false;
-    if (StateNumber != other.StateNumber) return false;
+    if(!stateNumber_.Equals(other.stateNumber_)) return false;
     if (Consume != other.Consume) return false;
     if (DiscountCoefficient != other.DiscountCoefficient) return false;
     return Equals(_unknownFields, other._unknownFields);
@@ -6784,7 +6774,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
   public override int GetHashCode() {
     int hash = 1;
     if (ID != 0) hash ^= ID.GetHashCode();
-    if (StateNumber.Length != 0) hash ^= StateNumber.GetHashCode();
+    hash ^= stateNumber_.GetHashCode();
     if (Consume != 0) hash ^= Consume.GetHashCode();
     if (DiscountCoefficient != 0) hash ^= DiscountCoefficient.GetHashCode();
     if (_unknownFields != null) {
@@ -6807,10 +6797,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
       output.WriteRawTag(8);
       output.WriteSInt32(ID);
     }
-    if (StateNumber.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteBytes(StateNumber);
-    }
+    stateNumber_.WriteTo(output, _repeated_stateNumber_codec);
     if (Consume != 0) {
       output.WriteRawTag(24);
       output.WriteSInt32(Consume);
@@ -6832,10 +6819,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
       output.WriteRawTag(8);
       output.WriteSInt32(ID);
     }
-    if (StateNumber.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteBytes(StateNumber);
-    }
+    stateNumber_.WriteTo(ref output, _repeated_stateNumber_codec);
     if (Consume != 0) {
       output.WriteRawTag(24);
       output.WriteSInt32(Consume);
@@ -6856,9 +6840,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
     if (ID != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(ID);
     }
-    if (StateNumber.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(StateNumber);
-    }
+    size += stateNumber_.CalculateSize(_repeated_stateNumber_codec);
     if (Consume != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(Consume);
     }
@@ -6879,9 +6861,7 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
     if (other.ID != 0) {
       ID = other.ID;
     }
-    if (other.StateNumber.Length != 0) {
-      StateNumber = other.StateNumber;
-    }
+    stateNumber_.Add(other.stateNumber_);
     if (other.Consume != 0) {
       Consume = other.Consume;
     }
@@ -6906,8 +6886,9 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
           ID = input.ReadSInt32();
           break;
         }
-        case 18: {
-          StateNumber = input.ReadBytes();
+        case 18:
+        case 16: {
+          stateNumber_.AddEntriesFrom(input, _repeated_stateNumber_codec);
           break;
         }
         case 24: {
@@ -6936,8 +6917,9 @@ public sealed partial class st_alliance_createprice_data : pb::IMessage<st_allia
           ID = input.ReadSInt32();
           break;
         }
-        case 18: {
-          StateNumber = input.ReadBytes();
+        case 18:
+        case 16: {
+          stateNumber_.AddEntriesFrom(ref input, _repeated_stateNumber_codec);
           break;
         }
         case 24: {
@@ -7184,9 +7166,9 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
 
   /// <summary>Field number for the "picture1" field.</summary>
   public const int Picture1FieldNumber = 3;
-  private pb::ByteString picture1_ = pb::ByteString.Empty;
+  private string picture1_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Picture1 {
+  public string Picture1 {
     get { return picture1_; }
     set {
       picture1_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -7195,9 +7177,9 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
 
   /// <summary>Field number for the "picture2" field.</summary>
   public const int Picture2FieldNumber = 4;
-  private pb::ByteString picture2_ = pb::ByteString.Empty;
+  private string picture2_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Picture2 {
+  public string Picture2 {
     get { return picture2_; }
     set {
       picture2_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -7206,9 +7188,9 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
 
   /// <summary>Field number for the "icon1" field.</summary>
   public const int Icon1FieldNumber = 5;
-  private pb::ByteString icon1_ = pb::ByteString.Empty;
+  private string icon1_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Icon1 {
+  public string Icon1 {
     get { return icon1_; }
     set {
       icon1_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -7217,9 +7199,9 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
 
   /// <summary>Field number for the "icon2" field.</summary>
   public const int Icon2FieldNumber = 6;
-  private pb::ByteString icon2_ = pb::ByteString.Empty;
+  private string icon2_ = "";
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pb::ByteString Icon2 {
+  public string Icon2 {
     get { return icon2_; }
     set {
       icon2_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -7296,19 +7278,19 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
     }
     if (Picture1.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Picture1);
+      output.WriteString(Picture1);
     }
     if (Picture2.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(Picture2);
+      output.WriteString(Picture2);
     }
     if (Icon1.Length != 0) {
       output.WriteRawTag(42);
-      output.WriteBytes(Icon1);
+      output.WriteString(Icon1);
     }
     if (Icon2.Length != 0) {
       output.WriteRawTag(50);
-      output.WriteBytes(Icon2);
+      output.WriteString(Icon2);
     }
     if (Condition != 0) {
       output.WriteRawTag(56);
@@ -7333,19 +7315,19 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
     }
     if (Picture1.Length != 0) {
       output.WriteRawTag(26);
-      output.WriteBytes(Picture1);
+      output.WriteString(Picture1);
     }
     if (Picture2.Length != 0) {
       output.WriteRawTag(34);
-      output.WriteBytes(Picture2);
+      output.WriteString(Picture2);
     }
     if (Icon1.Length != 0) {
       output.WriteRawTag(42);
-      output.WriteBytes(Icon1);
+      output.WriteString(Icon1);
     }
     if (Icon2.Length != 0) {
       output.WriteRawTag(50);
-      output.WriteBytes(Icon2);
+      output.WriteString(Icon2);
     }
     if (Condition != 0) {
       output.WriteRawTag(56);
@@ -7367,16 +7349,16 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(Style);
     }
     if (Picture1.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Picture1);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Picture1);
     }
     if (Picture2.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Picture2);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Picture2);
     }
     if (Icon1.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Icon1);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon1);
     }
     if (Icon2.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeBytesSize(Icon2);
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon2);
     }
     if (Condition != 0) {
       size += 1 + pb::CodedOutputStream.ComputeSInt32Size(Condition);
@@ -7436,19 +7418,19 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
           break;
         }
         case 26: {
-          Picture1 = input.ReadBytes();
+          Picture1 = input.ReadString();
           break;
         }
         case 34: {
-          Picture2 = input.ReadBytes();
+          Picture2 = input.ReadString();
           break;
         }
         case 42: {
-          Icon1 = input.ReadBytes();
+          Icon1 = input.ReadString();
           break;
         }
         case 50: {
-          Icon2 = input.ReadBytes();
+          Icon2 = input.ReadString();
           break;
         }
         case 56: {
@@ -7478,19 +7460,19 @@ public sealed partial class st_alliance_flag_data : pb::IMessage<st_alliance_fla
           break;
         }
         case 26: {
-          Picture1 = input.ReadBytes();
+          Picture1 = input.ReadString();
           break;
         }
         case 34: {
-          Picture2 = input.ReadBytes();
+          Picture2 = input.ReadString();
           break;
         }
         case 42: {
-          Icon1 = input.ReadBytes();
+          Icon1 = input.ReadString();
           break;
         }
         case 50: {
-          Icon2 = input.ReadBytes();
+          Icon2 = input.ReadString();
           break;
         }
         case 56: {
