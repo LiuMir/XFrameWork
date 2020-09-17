@@ -3,8 +3,8 @@ using Google.Protobuf.Collections;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -122,6 +122,7 @@ namespace ExcelToProtobuf
                 }
                 Serialize(configIns, sheet.SheetName);
                 WriteLawsData(configIns, sheet.SheetName);
+                SerializePos(configIns, sheet.SheetName);
             }
         }
 
@@ -178,10 +179,35 @@ namespace ExcelToProtobuf
             }
         }
 
-        // 位置数据
+        // 位置数据，为了加载数据的时候不用全部加载（按需加载）
+        // 自定义选择 如果需要自己编写 .proto文件
         private static void SerializePos(object obj, string sheetName)
         {
+            string fileName = sheetName + "Pos.bytes";
+            object configIns = assembly.CreateInstance("clientDataPosConfig"); // 创建数据容器类
+            PropertyInfo propertyInfo = configIns.GetType().GetProperty("Datas"); // 取到容器字段
+            object DatasVal = propertyInfo.GetValue(configIns); // 取到容器
 
+            PropertyInfo objPInfo = obj.GetType().GetProperty("Datas"); // 取到容器字段
+            IList datas = objPInfo.GetValue(obj) as IList;
+            int pos = 0;
+            for (int i = 0; i < datas.Count; i++)
+            {
+                object dataIns = assembly.CreateInstance("clientDataPos"); // 创建数据类
+                MethodInfo addMethod =  propertyInfo.PropertyType.GetMethod("Add", new Type[] { dataIns.GetType() });
+                addMethod?.Invoke(DatasVal, new[] { dataIns }); // 往容器中添加数据
+
+                int length = (obj as IMessage).ToByteArray().Length; // 使用Pb自带的转字节数组
+                dataIns.GetType().GetField("index_", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(dataIns, i); // 数据在第几行
+                dataIns.GetType().GetField("length_", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(dataIns, length);// 当前行数据长度
+                dataIns.GetType().GetField("pos_", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(dataIns, pos);// 当前行数据开始位置
+                pos += length;
+            }
+            // 数据写进文件
+            using (FileStream fs = new FileStream(Path.Combine(Common.dataFileDirPath, fileName), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite))
+            {
+                MessageExtensions.WriteTo(configIns as IMessage, fs);
+            }
         }
 
         // 明文数据
@@ -196,6 +222,6 @@ namespace ExcelToProtobuf
                 fs.Write(newDatas, 0, newDatas.Length);
             }
         }
-
+        
     }
 }
