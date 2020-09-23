@@ -328,6 +328,18 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/UnityPath/Unity2018.4.3f1/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>

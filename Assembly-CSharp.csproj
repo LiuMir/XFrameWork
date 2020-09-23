@@ -78,6 +78,7 @@
     <Compile Include="Assets\_Framework\GameEnter.cs" />
     <Compile Include="Assets\_Framework\Manager\ABMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\CoroutineMgr.cs" />
+    <Compile Include="Assets\_Framework\Manager\DataReadBase.cs" />
     <Compile Include="Assets\_Framework\Manager\GameObjMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\NotificationMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\ReferenceMgr.cs" />
@@ -309,6 +310,18 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/UnityPath/Unity2018.4.3f1/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
