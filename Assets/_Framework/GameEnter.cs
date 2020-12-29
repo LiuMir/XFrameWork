@@ -48,11 +48,7 @@ public class GameEnter:MonoSingle<GameEnter>
 
     private void ButtonTest()
     {
-        Button.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => {
-            GameObjMgr.Instance.ShowParent<NewUI>("NewUI", Canvas, (newUI) => {
-                GameObjMgr.Instance.ShowChild<DeleteBtnUI>("DeleteBtn", newUI, null);
-            });
-        });
+        
     }
 
 

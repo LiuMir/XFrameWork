@@ -41,9 +41,6 @@ public class NewUI : MonoBaseClass
 
     private void BtnTest()
     {
-        btn = this.Go.transform.Find("Panel/Button").GetComponent<Button>();
-        btn.onClick.AddListener(() => {
-            GameObjMgr.Instance.Hide(this);
-        });
+      
     }
 }

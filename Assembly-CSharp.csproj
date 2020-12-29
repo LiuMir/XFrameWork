@@ -60,15 +60,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Framework\Common\AssetCoroutine.cs" />
     <Compile Include="Assets\_Framework\Common\Attribute\CountLimitAttribute.cs" />
     <Compile Include="Assets\_Framework\Common\Attribute\DestoryTimeAttribute.cs" />
+    <Compile Include="Assets\_Framework\Common\AwaiterExtension.cs" />
     <Compile Include="Assets\_Framework\Common\BaseClass\BaseClass.cs" />
     <Compile Include="Assets\_Framework\Common\BaseClass\BaseReference.cs" />
     <Compile Include="Assets\_Framework\Common\BaseClass\DataReadBase.cs" />
     <Compile Include="Assets\_Framework\Common\BaseClass\MonoBaseClass.cs" />
-    <Compile Include="Assets\_Framework\Common\CreateFactory.cs" />
     <Compile Include="Assets\_Framework\Common\EventCode.cs" />
+    <Compile Include="Assets\_Framework\Common\Res\BundleRes.cs" />
+    <Compile Include="Assets\_Framework\Common\Res\EditorRes.cs" />
+    <Compile Include="Assets\_Framework\Common\Res\IRes.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\MonoSingle.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\Singleton.cs" />
     <Compile Include="Assets\_Framework\Common\StaticSceneObj.cs" />
@@ -77,12 +79,11 @@
     <Compile Include="Assets\_Framework\Common\Utility\PathUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\TimeUtility.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
-    <Compile Include="Assets\_Framework\Manager\ABMgr.cs" />
+    <Compile Include="Assets\_Framework\Manager\AssetLoadManager.cs" />
     <Compile Include="Assets\_Framework\Manager\CoroutineMgr.cs" />
-    <Compile Include="Assets\_Framework\Manager\GameObjMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\NotificationMgr.cs" />
     <Compile Include="Assets\_Framework\Manager\ReferenceMgr.cs" />
-    <Compile Include="Assets\_Framework\Manager\ResourcesMgr.cs" />
+    <Compile Include="Assets\_Framework\Manager\ResManager.cs" />
     <Compile Include="Assets\_Framework\Manager\TimerMgr.cs" />
     <Compile Include="Assets\_Scripts\DeleteBtnUI.cs" />
     <Compile Include="Assets\_Scripts\NewUI.cs" />
