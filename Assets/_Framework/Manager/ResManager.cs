@@ -32,20 +32,53 @@ namespace ResLoadMgr
             m_manifest = AssetBundle.LoadFromFile(manifestPath).LoadAsset<AssetBundleManifest>("AssetBundleManifest");
         }
 
+        // 对外同步加载
         public IRes Load(string path, string name)
         {
+            IRes res = null;
 #if UNITY_EDITOR
-                IRes res = new EditorRes();
+            res = new EditorRes();
 #else
+            string[] deps = m_manifest.GetAllDependencies(path); // 不采用递归（怕出现循环依赖）
+            int len = deps.Length;
+            for (int i = 0; i < len; i++)
+            {
+                LoadAssetBundle(deps[i]);
+            }
+            res = LoadAssetBundle(path);
+#endif
+            return res;
+        }
+
+        // 对外异步加载
+        public async Task<IRes> LoadAsync(string path, string name, Action<UnityEngine.Object> action)
+        {
+            IRes result = null;
+#if UNITY_EDITOR
+            result = new EditorRes();  
+#else
+            int count = 0; // 用来判断当前的异步加载是否完毕（需要包含自身）
+            string[] deps = m_manifest.GetAllDependencies(path);
+            int len = deps.Length;
+            int totalCount = len + 1;
+            for (int i = 0; i < len; i++)
+            {
+                LoadAssetBundleAsync(deps[i], action, () => { count++;}).Start();
+            }
+            result = await LoadAssetBundleAsync(path, action, () => { count++; });
+            while (count!= totalCount) // 等待所有AB加载完毕
+            {
+                await Task.Yield();
+            }
+#endif
+            return result;
+        }
+
+        //同步加载AssetBundle
+        private IRes LoadAssetBundle(string path)
+        {
             if (!m_LoadedRes.TryGetValue(path, out IRes res))
             {
-                string[] deps = m_manifest.GetAllDependencies(path);
-                int len = deps.Length;
-                for (int i = 0; i < len; i++)
-                {
-                    Load(deps[i], "");
-                }
-
                 AssetBundle bundle = null;
                 if (m_LoadingRes.TryGetValue(path, out LoadingResUnit loadingRes))//正在异步加载的资源，需要打断加载
                 {
@@ -72,34 +105,22 @@ namespace ResLoadMgr
             {
                 (res as BundleRes).AddRef();
             }
-#endif
             return res;
         }
 
-        public async Task<IRes> LoadAsync(string path, string name, Action<UnityEngine.Object> action, Action countAction = null)
+        //异步加载AssetBundle
+        private async Task<IRes> LoadAssetBundleAsync(string path, Action<UnityEngine.Object> action, Action countAction)
         {
-#if UNITY_EDITOR
-            IRes result = new EditorRes();  
-#else
-            string[] deps = m_manifest.GetAllDependencies(path);
-            int count = 0;
-            int len = deps.Length;
-            for (int i = 0; i < len; i++)
-            {
-                LoadAsync(deps[i], "", null, () => { count++; }).Wait();
-            }
-
-            if (m_LoadingRes.TryGetValue(path, out LoadingResUnit resUnit)) //资源加载中
-            {
-                if (null != resUnit.Res)
-                {
-                    resUnit.Res.LoadFinishEvent += action;
-                }
-                return null;
-            }
-
             if (!LoadedRes.TryGetValue(path, out IRes result))
             {
+                if (m_LoadingRes.TryGetValue(path, out LoadingResUnit resUnit)) //资源加载中
+                {
+                    if (null != resUnit.Res)
+                    {
+                        resUnit.Res.LoadFinishEvent += action;
+                    }
+                    return null;
+                }
                 AssetBundleCreateRequest request = AssetBundle.LoadFromFileAsync(path);
                 result = new BundleRes();
                 m_LoadingRes.Add(path, new LoadingResUnit(result, request));
@@ -113,11 +134,6 @@ namespace ResLoadMgr
                 (result as BundleRes).AddRef();
             }
             countAction?.Invoke();
-            while (count!= len) // 等待所有AB加载完毕
-            {
-                await Task.Yield();
-            }
-#endif
             return result;
         }
 
