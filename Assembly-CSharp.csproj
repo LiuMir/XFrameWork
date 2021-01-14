@@ -87,6 +87,7 @@
     <Compile Include="Assets\_Framework\Manager\TimerMgr.cs" />
     <Compile Include="Assets\_Scripts\DeleteBtnUI.cs" />
     <Compile Include="Assets\_Scripts\NewUI.cs" />
+    <Compile Include="Assets\_Scripts\Utility\PageScroller.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/UnityDemo/FrameWork/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
