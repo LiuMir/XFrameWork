@@ -2,34 +2,30 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace ResLoadMgr
+public static class AwaiterExtension
 {
-    public static class AwaiterExtension
+    // 扩展AsyncOperation为可等待方式
+    public static AsyncOperationAwaiter GetAwaiter(this AsyncOperation op)
     {
-        // 扩展AsyncOperation为可等待方式
-        public static AsyncOperationAwaiter GetAwaiter(this AsyncOperation op)
-        {
-            return new AsyncOperationAwaiter(op);
-        }
+        return new AsyncOperationAwaiter(op);
+    }
+}
+
+public struct AsyncOperationAwaiter : INotifyCompletion
+{
+    private readonly AsyncOperation m_operation;
+
+    public AsyncOperationAwaiter(AsyncOperation operation)
+    {
+        this.m_operation = operation;
     }
 
-    public struct AsyncOperationAwaiter : INotifyCompletion
+    public bool IsCompleted { get { return m_operation.isDone; } }
+
+    public void GetResult() { }
+
+    public void OnCompleted(Action continuation)
     {
-        private readonly AsyncOperation m_operation;
-
-        public AsyncOperationAwaiter(AsyncOperation operation)
-        {
-            this.m_operation = operation;
-        }
-
-        public bool IsCompleted { get { return m_operation.isDone; } }
-
-        public void GetResult() { }
-
-        public void OnCompleted(Action continuation)
-        {
-            m_operation.completed += (operation)=> { continuation?.Invoke(); };
-        }
+        m_operation.completed += (operation)=> { continuation?.Invoke(); };
     }
-
 }

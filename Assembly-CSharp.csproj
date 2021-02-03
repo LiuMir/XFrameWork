@@ -71,13 +71,17 @@
     <Compile Include="Assets\_Framework\Common\Res\BundleRes.cs" />
     <Compile Include="Assets\_Framework\Common\Res\EditorRes.cs" />
     <Compile Include="Assets\_Framework\Common\Res\IRes.cs" />
+    <Compile Include="Assets\_Framework\Common\Res\ResListInfo.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\MonoSingle.cs" />
     <Compile Include="Assets\_Framework\Common\Singleton\Singleton.cs" />
     <Compile Include="Assets\_Framework\Common\StaticSceneObj.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\AssertUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\DebugUtility.cs" />
+    <Compile Include="Assets\_Framework\Common\Utility\DownLoadFileUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\PathUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\TimeUtility.cs" />
+    <Compile Include="Assets\_Framework\Common\Utility\ToolUtility.cs" />
+    <Compile Include="Assets\_Framework\Common\Utility\UpdateResUtility.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
     <Compile Include="Assets\_Framework\Manager\AssetLoadManager.cs" />
     <Compile Include="Assets\_Framework\Manager\CoroutineMgr.cs" />

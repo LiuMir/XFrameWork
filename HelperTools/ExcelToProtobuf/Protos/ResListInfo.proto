@@ -1,0 +1,15 @@
+syntax = "proto3"; 
+option optimize_for = LITE_RUNTIME;
+
+message ResListInfo {
+	string Ver = 1;
+	repeated SingleResInfo info = 2;
+}
+
+message SingleResInfo {
+	string Path = 1;
+	string Md5 = 2;
+	int32 Size = 3;
+	int32 Status = 4;
+
+}
