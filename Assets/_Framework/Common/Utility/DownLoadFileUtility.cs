@@ -42,7 +42,9 @@ public class DownLoadFileUtility:Singleton<DownLoadFileUtility>
                 {
                     webRequest.url = downLoadInfo.Url;
                 }
-                using (webRequest.downloadHandler = new DownloadHandlerFile(downLoadInfo.SavePath)) // 想缓存，但是缓存后没找到修改保存路径的方法
+                using (webRequest.downloadHandler = new DownloadHandlerFile(downLoadInfo.SavePath) {
+                    removeFileOnAbort = true
+                }) // 想缓存DownloadHandlerFile，但是缓存后没找到修改保存路径的方法
                 {
                     await webRequest.SendWebRequest(); // 等待文件下载完成
                     if (webRequest.isDone && webRequest.isNetworkError)
