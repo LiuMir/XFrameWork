@@ -82,6 +82,7 @@
     <Compile Include="Assets\_Framework\Common\Utility\TimeUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\ToolUtility.cs" />
     <Compile Include="Assets\_Framework\Common\Utility\UpdateResUtility.cs" />
+    <Compile Include="Assets\_Framework\Common\Utility\ZipUtility.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
     <Compile Include="Assets\_Framework\Manager\AssetLoadManager.cs" />
     <Compile Include="Assets\_Framework\Manager\CoroutineMgr.cs" />
@@ -328,6 +329,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/UnityPath/Unity2018.4.3f1/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

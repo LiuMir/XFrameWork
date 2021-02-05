@@ -340,6 +340,9 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/UnityPath/Unity2018.4.3f1/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>
