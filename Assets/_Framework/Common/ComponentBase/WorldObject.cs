@@ -15,7 +15,7 @@ public  class WorldObject
     public T AddComponent<T>(T com) where T : WorldComponent
     {
         m_GameComponets.Add(com);
-        com.gameObject = GameObj;
+        com.Entity = this;
         return com;
     }
 
