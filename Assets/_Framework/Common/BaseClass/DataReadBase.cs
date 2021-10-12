@@ -3,6 +3,8 @@ using System;
 using System.IO;
 using UnityEngine;
 
+//  TDataArray 对应XXX_config  TReader对应继承DataReadBase的子类 
+// 例如 public class DataTest : DataReadBase<st_main_menu_config, DataTest>{}
 public class DataReadBase<TDataArray, TReader> where TDataArray : IMessage, new()  where TReader : new()
 {
     #region 单例实现
