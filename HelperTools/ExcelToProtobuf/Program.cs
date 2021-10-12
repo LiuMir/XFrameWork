@@ -21,6 +21,7 @@ namespace ExcelToProtobuf
                 }
                 else
                 {
+                    Common.ParsePath(lines);
                     if (Directory.Exists(lines[0]) && Directory.Exists(lines[1]))
                     {
                         string[] paths = ReadExcel.GetAllExcelPaths(lines[0]);
