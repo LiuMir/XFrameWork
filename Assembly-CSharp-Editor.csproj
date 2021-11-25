@@ -60,7 +60,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Framework\Editor\BundleConfig\BundleConfigDefine.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\DragRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerDownDetectorInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerEventDetectorInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerGesturesEditorUtils.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerGesturesInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerHoverDetectorInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerMotionDetectorInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\FingerUpDetectorInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\GestureRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\LongPressRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\PinchRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\PointCloudGestureEditor.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\PointCloudGestureTemplateInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\PointCloudRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\SwipeRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\TapRecognizerInspector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\Editor\FingerGestures\TwistRecognizerInspector.cs" />
+    <Compile Include="Assets\_Framework\_Common\_UIMgrModule\Editor\UIViewEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/UnityDemo/FrameWork/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -316,18 +333,6 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -342,6 +347,18 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/UnityPath/Unity2018.4.3f1/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

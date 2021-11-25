@@ -60,43 +60,73 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Framework\Common\Attribute\CountLimitAttribute.cs" />
-    <Compile Include="Assets\_Framework\Common\Attribute\DestoryTimeAttribute.cs" />
-    <Compile Include="Assets\_Framework\Common\AwaiterExtension.cs" />
-    <Compile Include="Assets\_Framework\Common\BaseClass\BaseClass.cs" />
-    <Compile Include="Assets\_Framework\Common\BaseClass\BaseReference.cs" />
-    <Compile Include="Assets\_Framework\Common\BaseClass\DataReadBase.cs" />
-    <Compile Include="Assets\_Framework\Common\BaseClass\MonoBaseClass.cs" />
-    <Compile Include="Assets\_Framework\Common\ComponentBase\MonoHelper.cs" />
-    <Compile Include="Assets\_Framework\Common\ComponentBase\WorldComponent.cs" />
-    <Compile Include="Assets\_Framework\Common\ComponentBase\WorldObject.cs" />
-    <Compile Include="Assets\_Framework\Common\EventCode.cs" />
-    <Compile Include="Assets\_Framework\Common\Res\BundleRes.cs" />
-    <Compile Include="Assets\_Framework\Common\Res\EditorRes.cs" />
-    <Compile Include="Assets\_Framework\Common\Res\IRes.cs" />
-    <Compile Include="Assets\_Framework\Common\Res\ResListInfo.cs" />
-    <Compile Include="Assets\_Framework\Common\Singleton\MonoSingle.cs" />
-    <Compile Include="Assets\_Framework\Common\Singleton\Singleton.cs" />
-    <Compile Include="Assets\_Framework\Common\StaticSceneObj.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\AssertUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\DebugUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\DownLoadFileUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\PathUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\TimeUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\ToolUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\UpdateResUtility.cs" />
-    <Compile Include="Assets\_Framework\Common\Utility\ZipUtility.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Dev\FingerDebug.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Base\ContinuousGestureRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Base\DiscreteGestureRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Base\FingerEventDetector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Base\GestureRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Base\GestureRecognizerDelegate.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Components\FingerClusterManager.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Components\ScreenRaycaster.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Finger Event Detectors\FingerDownDetector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Finger Event Detectors\FingerHoverDetector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Finger Event Detectors\FingerMotionDetector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Finger Event Detectors\FingerUpDetector.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\FingerGestures.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\DragRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\LongPressRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\PinchRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\PointCloudGestureTemplate.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\PointCloudRegognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\SwipeRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\TapRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Gesture Recognizers\TwistRecognizer.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Input Providers\FGInputProvider.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Input Providers\FGMouseInputProvider.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Input Providers\FGTouchInputProvider.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\Camera\TBDragView.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\Camera\TBLookAtTap.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\Camera\TBOrbit.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\Camera\TBPan.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\Camera\TBPinchZoom.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\TBDragToMove.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\TBHoverChangeMaterial.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\TBHoverChangeScale.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\TBPinchToScale.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\TBQuickSetup.cs" />
+    <Compile Include="Assets\_3rd\_FingerGesture\FingerGestures\Scripts\Toolbox\TBTwistToRotate.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Res\BundleRes.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Res\EditorRes.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Res\IRes.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Res\ResListInfo.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Singleton\MonoSingle.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Singleton\Singleton.cs" />
+    <Compile Include="Assets\_Framework\_Common\_UIMgrModule\IShowView.cs" />
+    <Compile Include="Assets\_Framework\_Common\_UIMgrModule\UIMgr.cs" />
+    <Compile Include="Assets\_Framework\_Common\_UIMgrModule\UIPathConfig.cs" />
+    <Compile Include="Assets\_Framework\_Common\_UIMgrModule\UIView.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\AssertUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\DebugUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\DownLoadFileUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\PathUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\TimeUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\ToolUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\UpdateResUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\_Utility\ZipUtility.cs" />
+    <Compile Include="Assets\_Framework\_Common\AwaiterExtension.cs" />
+    <Compile Include="Assets\_Framework\_Common\CommonConfig.cs" />
+    <Compile Include="Assets\_Framework\_Common\DataReadBase.cs" />
+    <Compile Include="Assets\_Framework\_Common\EventCode.cs" />
+    <Compile Include="Assets\_Framework\_Common\StaticSceneObj.cs" />
+    <Compile Include="Assets\_Framework\_Editor\_BundleConfig\BundleConfigDefine.cs" />
+    <Compile Include="Assets\_Framework\_Manager\AssetLoadManager.cs" />
+    <Compile Include="Assets\_Framework\_Manager\CoroutineMgr.cs" />
+    <Compile Include="Assets\_Framework\_Manager\NotificationMgr.cs" />
+    <Compile Include="Assets\_Framework\_Manager\ResManager.cs" />
+    <Compile Include="Assets\_Framework\_Manager\TimerMgr.cs" />
     <Compile Include="Assets\_Framework\GameEnter.cs" />
-    <Compile Include="Assets\_Framework\Manager\AssetLoadManager.cs" />
-    <Compile Include="Assets\_Framework\Manager\CoroutineMgr.cs" />
-    <Compile Include="Assets\_Framework\Manager\NotificationMgr.cs" />
-    <Compile Include="Assets\_Framework\Manager\ReferenceMgr.cs" />
-    <Compile Include="Assets\_Framework\Manager\ResManager.cs" />
-    <Compile Include="Assets\_Framework\Manager\TimerMgr.cs" />
-    <Compile Include="Assets\_Scripts\DeleteBtnUI.cs" />
-    <Compile Include="Assets\_Scripts\NewUI.cs" />
-    <Compile Include="Assets\_Scripts\Utility\PageScroller.cs" />
-    <None Include="Assets\Doc\AssetBundleReadMe.txt" />
+    <Compile Include="Assets\_Scripts\_Utility\PageScroller.cs" />
+    <None Include="Assets\_Doc\AssetBundleReadMe.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/UnityDemo/FrameWork/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -316,18 +346,6 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/Pb3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -336,6 +354,18 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>E:/UnityDemo/FrameWork/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>E:/UnityDemo/FrameWork/Assets/_3rd/_Pb3/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/UnityPath/Unity2018.4.3f1/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
