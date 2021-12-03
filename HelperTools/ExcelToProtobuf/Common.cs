@@ -18,19 +18,19 @@ namespace ExcelToProtobuf
         // 转换路径 -> dataFileDirPath posDataFileDirPath lawsDataFileDirPath
         public static void ParsePath(string[] pathLists)
         {
-            if (pathLists.Length >= 6 && pathLists[5].Length >  0)
+            if (pathLists.Length >= 5 && pathLists[4].Length >  0)
             {
-                dataFileDirPath = pathLists[5];
+                dataFileDirPath = pathLists[4];
+            }
+
+            if (pathLists.Length >= 6 && pathLists[5].Length > 0)
+            {
+                posDataFileDirPath = pathLists[5];
             }
 
             if (pathLists.Length >= 7 && pathLists[6].Length > 0)
             {
-                posDataFileDirPath = pathLists[6];
-            }
-
-            if (pathLists.Length >= 8 && pathLists[7].Length > 0)
-            {
-                lawsDataFileDirPath = pathLists[7];
+                lawsDataFileDirPath = pathLists[6];
             }
         }
     }

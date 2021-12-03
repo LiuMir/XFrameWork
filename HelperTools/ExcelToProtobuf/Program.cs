@@ -41,7 +41,8 @@ namespace ExcelToProtobuf
                         if (isGenerat)
                         {
                             Console.WriteLine("开始编译C#类…………");
-                            bool isCompiler = Compiler2Dll.Compiler(lines[3], lines[3], lines[4]);
+                            string dllPath = exePath + "\\Google.Protobuf.dll";
+                            bool isCompiler = Compiler2Dll.Compiler(lines[3], lines[3], dllPath);
                             Console.WriteLine("编译C#类完成…………");
 
                             if (isCompiler)
@@ -51,7 +52,8 @@ namespace ExcelToProtobuf
                                 Console.WriteLine("序列化数据完成…………");
                             }
                         }
-
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("编表全部结束！！！");
                     }
                     else
                     {

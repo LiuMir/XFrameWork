@@ -1,5 +1,7 @@
-E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\Excel
-E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\Protos
-E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\BuildProtos.bat
-E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\Csharp
-E:\UnityDemo\FrameWork\HelperTools\ExcelToProtobuf\bin\Debug\Google.Protobuf.dll
+E:\UnityDemo\EliminateGame\HelperTools\ExcelToProtobuf\Excel
+E:\UnityDemo\EliminateGame\HelperTools\ExcelToProtobuf\Protos
+E:\UnityDemo\EliminateGame\HelperTools\ExcelToProtobuf\BuildProtos.bat
+E:\UnityDemo\EliminateGame\HelperTools\ExcelToProtobuf\Csharp
+E:\UnityDemo\EliminateGame\Assets\_Res\_Config
+
+E:\UnityDemo\EliminateGame\HelperTools\ExcelToProtobuf\LawsData

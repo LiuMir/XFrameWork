@@ -16,4 +16,4 @@ for /r %%i in (*.proto) do (
 echo.
 echo .proto文件转.cs文件结束
 echo.
-pause
+exit
