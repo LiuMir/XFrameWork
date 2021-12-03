@@ -23,7 +23,7 @@ public class UIWindowLayerContent : IShowView
 
     public UIView GetTopUIView()
     {
-        return windowView.Peek();
+        return windowView.Count > 0 ? windowView.Peek() : null;
     }
 
     public void OnHide(UIView view)
@@ -36,6 +36,7 @@ public class UIWindowLayerContent : IShowView
                 Debug.LogWarning($"[WindowLayer]当前想要隐藏的ui与实际隐藏的ui不一致，想要隐藏的UIName->{view.UIName}，实际隐藏的UIName->{popView.UIName}");
             }
             popView?.RealUIView?.Close();
+            ShowTopView();
         }
         else
         {
@@ -45,6 +46,7 @@ public class UIWindowLayerContent : IShowView
 
     public void OnShow(UIView view, bool isNew, BaseArgs args = null, Action finishAction = null)
     {
+        HideTopView();
         GameObject winRoot = new GameObject(view.UIName + "_root"); // TODO 暂时先这么写名字 每一个winLayer都有WindowRoot 
         winRoot.layer = LayerMask.NameToLayer("UI");
         winRoot.transform.SetParent(uiRoot.transform, false);
@@ -78,6 +80,28 @@ public class UIWindowLayerContent : IShowView
         rect.anchorMax = Vector2.one;
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
+    }
+
+    //  打开一个界面时先隐藏最顶上到layer
+    private void HideTopView()
+    {
+        UIView view = GetTopUIView();
+        if (null != view)
+        {
+            view.Canvas.enabled = false;
+            view.enabled = false;
+        }
+    }
+
+    //  关闭一个界面时打开下一个layer
+    private void ShowTopView()
+    {
+        UIView view = GetTopUIView();
+        if (null != view)
+        {
+            view.Canvas.enabled = true;
+            view.enabled = true;
+        }
     }
 }
 
@@ -169,6 +193,24 @@ public class UIPopLayerContent : IShowView
                 UIView popView = popLayers.Peek();
                 OnHide(popView);
                 recycleAction?.Invoke(popView);
+            }
+        }
+    }
+
+    // 隐藏当前winlayer下的所有poplayer
+    public void SetLayersVisiableUnderTopWinLayer(UIView windowUIView, bool isShow)
+    {
+        if (null == windowUIView)
+        {
+            return;
+        }
+        int instanceID = windowUIView.gameObject.GetInstanceID();
+        if (allPopLayers.TryGetValue(instanceID, out Stack<UIView> popLayers))
+        {
+            foreach (var item in popLayers)
+            {
+                item.Canvas.enabled = isShow;
+                item.enabled = isShow;
             }
         }
     }

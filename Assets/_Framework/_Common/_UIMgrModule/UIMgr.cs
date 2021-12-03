@@ -37,6 +37,7 @@ public class UIMgr:Singleton<UIMgr>
             return;
         }
         view.gameObject.name = uiName + "_" + count;
+        SetPopLayerViewVisiableInWinLayer(view, false);
         GetCreateUIMethod(view.WindowLayer)?.OnShow(view, isNew, args, finishAction);
         count++;
     }
@@ -46,6 +47,7 @@ public class UIMgr:Singleton<UIMgr>
     {
         ClosePopLayerViewInWinLayer(view);
         GetCreateUIMethod(view.WindowLayer)?.OnHide(view);
+        SetPopLayerViewVisiableInWinLayer(view, true);
         RecycleUIView(view);
     }
 
@@ -138,6 +140,22 @@ public class UIMgr:Singleton<UIMgr>
         {
             IShowView showView = GetCreateUIMethod(UIWindowLayer.PopLayer);
             (showView as UIPopLayerContent)?.OnCloseAllPopLayerInWinLayer(view, (recycleView)=> { RecycleUIView(recycleView); });
+        }
+    }
+
+    // 获取最顶层winLayer UIView
+    private UIView GetTopWinLayerView()
+    {
+        return GetCreateUIMethod(UIWindowLayer.WindowLayer).GetTopUIView();
+    }
+
+    // 当打开、关闭的windowLayer时 显示、隐藏当前windowLayer下的所有的PopLayer
+    private void SetPopLayerViewVisiableInWinLayer(UIView view, bool isShow)
+    {
+        if (view.WindowLayer == UIWindowLayer.WindowLayer)
+        {
+            IShowView showView = GetCreateUIMethod(UIWindowLayer.PopLayer);
+            (showView as UIPopLayerContent)?.SetLayersVisiableUnderTopWinLayer(GetTopWinLayerView(), isShow);
         }
     }
 
